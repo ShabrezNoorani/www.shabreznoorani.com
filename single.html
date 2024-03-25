@@ -316,78 +316,81 @@
         
                 <!-- Comment Section Starts -->
                    
-                   <div class="comment-section" style="text-align: left;">
-                       <h2>Leave a Comment</h2>
-                       <form id="commentForm">
-                           <!-- Add field for name -->
-                           <input type="text" id="commenterName" placeholder="Your name..." required>
-                           <textarea id="commentInput" placeholder="Write your comment here..." required></textarea>
-                           <button type="submit">Post Comment</button>
-                       </form>
-                       <div id="commentsDisplay" class="comments-display"></div>
-                   </div>
+                  <div class="comment-section" style="text-align: left;">
+                      <h2>Leave a Comment</h2>
+                      <form id="commentForm">
+                          <input type="text" id="commenterName" placeholder="Your Name" required><br>
+                          <textarea id="commentInput" placeholder="Write your comment here..." required></textarea><br>
+                          <button type="submit">Post Comment</button>
+                      </form>
+                      <div id="commentsDisplay" class="comments-display"></div>
+                  </div>
 
+<!-- Java script -->
+<!-- import java secript --> 
 
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js"></script>
+<!-- import java script ends -->
 <script>
-    document.getElementById("commentForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the form from submitting traditionally
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+    import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
 
-    var commenterName = document.getElementById("commenterName").value.trim();
-    var commentText = document.getElementById("commentInput").value.trim();
+    // Your Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyCTGCGr-y4CF3XqroX12Co-iwb2uz3hw-k",
+        authDomain: "comments-48247.firebaseapp.com",
+        databaseURL: "https://comments-48247-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "comments-48247",
+        storageBucket: "comments-48247.appspot.com",
+        messagingSenderId: "745862509147",
+        appId: "1:745862509147:web:ecf10cf863747bc3ad857e",
+        measurementId: "G-DQ9TCP196F"
+    };
 
-    if (commenterName && commentText) {
-        var comment = {
-            name: commenterName,
-            text: commentText
-        };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
 
-        // Save the new comment to localStorage
-        saveComment(comment);
-
-        // Clear the form fields
-        document.getElementById("commenterName").value = "";
-        document.getElementById("commentInput").value = "";
-
-        // Display all comments including the new one
-        displayComments();
-    } else {
-        alert("Please enter your name and a comment.");
+    // Save comment to Firebase
+    function saveComment(name, comment) {
+        push(ref(database, 'comments/'), {
+            name: name,
+            comment: comment,
+            timestamp: Date.now()
+        });
     }
-});
 
-// Function to save a comment to localStorage
-function saveComment(comment) {
-    // Retrieve existing comments from localStorage
-    var comments = JSON.parse(localStorage.getItem("comments")) || [];
-    comments.push(comment);
-    localStorage.setItem("comments", JSON.stringify(comments));
-}
-
-// Function to display all comments from localStorage
-function displayComments() {
-    var comments = JSON.parse(localStorage.getItem("comments")) || [];
-    var commentsDisplay = document.getElementById("commentsDisplay");
-    commentsDisplay.innerHTML = ''; // Clear existing comments
-
-    comments.forEach(function(comment) {
-        var commentDiv = document.createElement("div");
-        var commenterNameDiv = document.createElement("div");
-        var commentTextDiv = document.createElement("div");
-
-        commenterNameDiv.textContent = comment.name + " says:";
-        commentTextDiv.textContent = comment.text;
-
-        commentDiv.appendChild(commenterNameDiv);
-        commentDiv.appendChild(commentTextDiv);
-        commentsDisplay.appendChild(commentDiv);
+    // Handle form submission
+    document.getElementById('commentForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('commenterName').value.trim();
+        const comment = document.getElementById('commentInput').value.trim();
+        if (name && comment) {
+            saveComment(name, comment);
+            document.getElementById('commenterName').value = '';
+            document.getElementById('commentInput').value = '';
+        }
     });
-}
 
-// Load and display comments when the page loads
-document.addEventListener("DOMContentLoaded", function() {
+    // Retrieve comments from Firebase
+    function displayComments() {
+        const commentsRef = ref(database, 'comments/');
+        onValue(commentsRef, (snapshot) => {
+            const commentsDisplay = document.getElementById('commentsDisplay');
+            commentsDisplay.innerHTML = ''; // Clear current comments
+            snapshot.forEach((childSnapshot) => {
+                const comment = childSnapshot.val();
+                const div = document.createElement('div');
+                div.innerHTML = `<strong>${comment.name}:</strong> ${comment.comment}`;
+                commentsDisplay.appendChild(div);
+            });
+        });
+    }
+
+    // Call displayComments on page load
     displayComments();
-});
 </script>
+
                 <!-- comment section ends -->
 
 
