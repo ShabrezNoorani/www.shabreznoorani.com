@@ -4798,6 +4798,8 @@ Game Section Styles
     padding: 20px;
     border-radius: 8px;
     margin-top: 20px;
+    width: 100%; /* Ensures box uses full available width */
+    box-sizing: border-box; /* Ensures padding does not add to the width */
 }
 
 .game-question {
@@ -4811,9 +4813,13 @@ Game Section Styles
     border: none;
     border-radius: 4px;
     padding: 10px 20px;
-    margin: 5px;
+    margin: 5px 0; /* Adjusted for spacing */
     cursor: pointer;
     display: block; /* Ensure full width */
+    white-space: normal; /* Allows text to wrap */
+    text-align: left; /* Aligns text to the left */
+    box-sizing: border-box; /* Ensures padding does not add to the width */
+    width: calc(100% - 10px); /* Full width minus margin for alignment */
 }
 
 .game-answers li button:hover {
@@ -4829,4 +4835,33 @@ Game Section Styles
 .incorrect-answer {
     background-color: #f44336; /* Red for incorrect */
     color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .game-question {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+    .game-answers li button {
+        font-size: 1rem; /* Adjust font size for better fit on mobile */
+        padding: 8px 15px; /* Adjust padding for mobile */
+    }
+}
+#answer-history table {
+    width: 100%;
+    max-width: 100%; /* Ensures table doesn't extend beyond viewport width */
+    border-collapse: collapse;
+    margin: auto;
+}
+
+#answer-history th, #answer-history td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+#answer-history {
+    overflow-x: auto; /* Enables horizontal scrolling for overflow content */
+}
+#answer-history th, #answer-history td {
+    word-wrap: break-word; /* Allows long words to be broken and wrapped onto the next line */
 }
