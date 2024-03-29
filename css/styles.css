@@ -4784,7 +4784,6 @@ td:last-child {
 Game Section Styles 
 -------------------------*/
 
-
 .s-digital-marketing-game {
     background-color: #f4f4f4; /* Light gray background */
     padding: 30px;
@@ -4820,6 +4819,7 @@ Game Section Styles
     text-align: left; /* Aligns text to the left */
     box-sizing: border-box; /* Ensures padding does not add to the width */
     width: calc(100% - 10px); /* Full width minus margin for alignment */
+    overflow-wrap: break-word; /* Ensures long words don't overflow */
 }
 
 .game-answers li button:hover {
@@ -4828,8 +4828,8 @@ Game Section Styles
 
 /* Styles for correct/incorrect answers */
 .correct-answer {
-    background-color: #4CAF50; /* Green for correct */
-    color: yellow;
+    background-color: darkgreen; /* Green for correct */
+    color: greenyellow;
 }
 
 .incorrect-answer {
@@ -4846,7 +4846,13 @@ Game Section Styles
         font-size: 1rem; /* Adjust font size for better fit on mobile */
         padding: 8px 15px; /* Adjust padding for mobile */
     }
+    .game-box, .game-answers button {
+        width: 100%; /* Adjust width for mobile responsiveness */
+        max-width: 100%; /* Prevents the element from exceeding its parent width */
+        box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    }
 }
+
 #answer-history table {
     width: 100%;
     max-width: 100%; /* Ensures table doesn't extend beyond viewport width */
