@@ -4877,3 +4877,26 @@ Game Section Styles
 #answer-history {
     overflow-x: auto; /* Enables horizontal scrolling for overflow content */
 }
+
+/*-------------------------------
+Adding flash to Please Use mobile in landscape mode
+---------------------------------*/
+@keyframes flashAndColor {
+    0%, 100% { 
+        opacity: 1; 
+        background-color: #ffd700; /* Gold color */
+        color: #000; /* Black text */
+    }
+    50% { 
+        opacity: 0.5; 
+        background-color: #ff4500; /* OrangeRed color */
+        color: #fff; /* White text */
+    }
+}
+
+.landscape-notice {
+    animation: flashAndColor 2s linear infinite;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block; /* To properly contain the padding and border-radius */
+}
