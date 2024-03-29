@@ -4842,14 +4842,15 @@ Game Section Styles
     .game-question {
         font-size: 1.5rem; /* Smaller font size for mobile */
     }
+    
     .game-answers li button {
-        font-size: 1rem; /* Adjust font size for better fit on mobile */
-        padding: 8px 15px; /* Adjust padding for mobile */
+        font-size: 0.9rem; /* Even smaller font size for mobile if necessary */
+        padding: 8px 10px; /* Reduce padding to allow more room for text */
     }
+
     .game-box, .game-answers button {
         width: 100%; /* Adjust width for mobile responsiveness */
         max-width: 100%; /* Prevents the element from exceeding its parent width */
-        box-sizing: border-box; /* Includes padding and border in the element's total width and height */
     }
 }
 
@@ -4864,10 +4865,9 @@ Game Section Styles
     border: 1px solid #ddd;
     text-align: left;
     padding: 8px;
+    word-wrap: break-word; /* Allows long words to be broken and wrapped onto the next line */
 }
+
 #answer-history {
     overflow-x: auto; /* Enables horizontal scrolling for overflow content */
-}
-#answer-history th, #answer-history td {
-    word-wrap: break-word; /* Allows long words to be broken and wrapped onto the next line */
 }
