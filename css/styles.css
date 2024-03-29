@@ -4783,7 +4783,6 @@ td:last-child {
 /*-------------------------
 Game Section Styles 
 -------------------------*/
-
 .s-digital-marketing-game {
     background-color: #f4f4f4; /* Light gray background */
     padding: 30px;
@@ -4811,17 +4810,16 @@ Game Section Styles
     color: #333;
     border: none;
     border-radius: 4px;
-    padding: 10px 20px;
-    margin: 5px 0; /* Adjusted for spacing */
+    margin: 10px 0; /* Adjusted for spacing */
     cursor: pointer;
     display: block; /* Ensure full width */
     white-space: normal; /* Allows text to wrap */
     text-align: left; /* Aligns text to the left */
     box-sizing: border-box; /* Ensures padding does not add to the width */
-    width: calc(100% - 10px); /* Full width minus margin for alignment */
     overflow-wrap: break-word; /* Ensures long words don't overflow */
 }
 
+/* Hover effect for buttons */
 .game-answers li button:hover {
     background-color: #d4d4d4;
 }
@@ -4837,23 +4835,31 @@ Game Section Styles
     color: white;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
     .game-question {
         font-size: 1.5rem; /* Smaller font size for mobile */
     }
     
     .game-answers li button {
-        font-size: 0.9rem; /* Even smaller font size for mobile if necessary */
-        padding: 8px 10px; /* Reduce padding to allow more room for text */
+        font-size: 0.9rem; /* Smaller font size for mobile */
+        padding: 8px 15px; /* Adjust padding for mobile */
     }
 
     .game-box, .game-answers button {
         width: 100%; /* Adjust width for mobile responsiveness */
-        max-width: 100%; /* Prevents the element from exceeding its parent width */
     }
 }
 
+/* Responsive adjustments for larger screens like PCs and laptops */
+@media (min-width: 601px) {
+    .game-answers li button {
+        padding: 14px 28px; /* More padding for larger screens */
+        font-size: 1.1rem; /* Slightly larger font size for readability */
+    }
+}
+
+/* Answer history table styles */
 #answer-history table {
     width: 100%;
     max-width: 100%; /* Ensures table doesn't extend beyond viewport width */
