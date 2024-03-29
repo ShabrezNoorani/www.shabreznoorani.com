@@ -362,6 +362,321 @@
 
             </section> <!-- end s-expertise -->
 
+            <!---------------------------------- Game Section begins-------------------------->
+
+
+            <section id="digital-marketing-game" class="s-digital-marketing-game">
+                <div class="row">
+                    <div class="column full text-center">
+                        <h2 class="section-title">Digital Marketing Master Game</h2>
+                        <p>Test your knowledge and become a Digital Marketing Master!<p style="font-size: 11px;">(Refreshing page will remove the answers from history)</p></p>
+                        <table style="margin-left: auto; margin-right: auto;">
+                            <tr>
+                                <th style="text-align: center;">Max Score</th>
+                                <th style="text-align: center;">Time</th>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">20</td>
+                                <td style="text-align: center;">90 Secs</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row game-content">
+                    <div class="column full">
+                        <div id="game" class="game-box">
+                            <div id="question" class="game-question">Question will appear here.</div>
+                            <ul id="answers" class="game-answers">
+                                <!-- Answers will be dynamically inserted here -->
+                            </ul>
+                            <div id="game-info" class="game-info">
+                                <p>Score: <span id="score">0</span></p>
+                                <p>Time: <span id="time">00:00</span></p>
+                            </div>
+                            <button id="start-btn" class="btn btn--primary" onclick="startGame()">Start Game</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Game JS begins-->
+
+
+            <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const questions = [
+        {
+            question: "What is the primary goal of retargeting in digital marketing?",
+            answers: ["Increasing website traffic", "Converting users into customers", "Gathering user data", "Improving search engine ranking"],
+            correctAnswer: 1
+        },
+        {
+            question: "Which of the following is a key metric for mobile app retargeting success?",
+            answers: ["Page views", "Conversion rate", "Bounce rate", "Number of app installs"],
+            correctAnswer: 1
+        },
+        {
+            question: "What does CTR stand for in digital marketing?",
+            answers: ["Click to Return", "Conversion Through Rate", "Click-Through Rate", "Customer Target Rating"],
+            correctAnswer: 2
+        },
+        {
+            question: "Which platform is widely used for creating search engine marketing campaigns?",
+            answers: ["Facebook Ads", "LinkedIn Marketing Solutions", "Google Ads", "Twitter Ads"],
+            correctAnswer: 2
+        },
+        {
+            question: "What is A/B testing in digital marketing?",
+            answers: ["Testing two different marketing strategies back to back", "Comparing the performance of two versions of a webpage or app", "Splitting your audience to test different time slots", "Analyzing two different target markets"],
+            correctAnswer: 1
+        },
+        {
+            question: "Which of the following best describes content marketing?",
+            answers: ["Promoting content exclusively through pay-per-click advertising", "Creating and sharing online material to stimulate interest in products", "Distributing flyers and brochures in digital format", "Emailing customers daily blog posts"],
+            correctAnswer: 1
+        },
+        {
+            question: "SEO is a practice of increasing a site's likelihood of being ranked in the first page of search engine results. What does SEO stand for?",
+            answers: ["Search Engine Optimization", "Search Engine Operations", "Site Enhancement Offering", "Social Media Optimization"],
+            correctAnswer: 0
+        },
+        {
+            question: "Which of these is considered a 'white hat' SEO practice?",
+            answers: ["Buying links", "Keyword stuffing", "Creating high-quality content", "Using hidden text"],
+            correctAnswer: 2
+        },
+        {
+            question: "In email marketing, what does the term 'open rate' refer to?",
+            answers: ["The percentage of emails opened compared to the total sent", "The number of people who unsubscribe after opening an email", "The total number of emails opened by a single user", "The frequency at which marketing emails are sent"],
+            correctAnswer: 0
+        },
+        {
+            question: "What is a 'lookalike audience' in digital advertising?",
+            answers: ["A group of users who have liked similar pages on social media", "A target audience that closely resembles another audience in a database", "Viewers of a competitor's ads", "People who look similar in profile pictures"],
+            correctAnswer: 1
+        },
+        {
+        question: "What is the primary purpose of retargeting ads?",
+        answers: [
+            "To reach new customers who have never visited your website",
+            "To display ads to people who have previously visited your website",
+            "To increase organic search rankings",
+            "To send email campaigns to potential customers"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "Which technology is most commonly used for retargeting?",
+        answers: [
+            "Cookies",
+            "QR codes",
+            "Bluetooth beacons",
+            "Email addresses"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is a 'pixel' in the context of website retargeting?",
+        answers: [
+            "A tiny image used to improve website design",
+            "A unit of digital image resolution",
+            "A code snippet placed on a website to track user behavior",
+            "A type of display ad format"
+        ],
+        correctAnswer: 2
+    },
+    {
+        question: "Why is segmentation important in retargeting campaigns?",
+        answers: [
+            "To decrease the website's load time",
+            "To target ads more precisely to different groups of users",
+            "To increase the cost of the campaign",
+            "To avoid using cookies and pixels"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "Which is a benefit of retargeting ads?",
+        answers: [
+            "Decreasing the relevance of ads to users",
+            "Increasing brand awareness among new users",
+            "Bringing previous visitors back to your site to complete a conversion",
+            "Reducing the need for content marketing"
+        ],
+        correctAnswer: 2
+    },
+    {
+        question: "How does 'dynamic retargeting' differ from standard retargeting?",
+        answers: [
+            "It displays the same ad to everyone",
+            "It customizes the ad content based on the user's previous interactions with the site",
+            "It is only used in email marketing",
+            "It doesn't use cookies or pixels"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "What role does 'frequency capping' play in retargeting?",
+        answers: [
+            "It ensures ads are shown as frequently as possible",
+            "It limits the number of times ads are shown to the same user",
+            "It increases the cost of ad campaigns",
+            "It caps the duration of the ad campaign"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "Which metric would best indicate the success of a retargeting campaign aimed at sales conversion?",
+        answers: [
+            "Click-through rate (CTR)",
+            "Conversion rate",
+            "Number of impressions",
+            "Cost per click (CPC)"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "In retargeting, what is 'list burning'?",
+        answers: [
+            "Deleting your entire retargeting list and starting over",
+            "Segmenting your list based on user behavior",
+            "Removing users from your retargeting list after they've converted",
+            "Increasing your advertising budget dramatically"
+        ],
+        correctAnswer: 2
+    },
+    {
+        question: "Why might a digital marketer use 'cross-device retargeting'?",
+        answers: [
+            "To target users only on desktop devices",
+            "To ensure ads are only shown on mobile devices",
+            "To reach users across different devices they use",
+            "To limit ad exposure to a single device per user"
+        ],
+        correctAnswer: 2
+    }
+];
+
+    let score = 0;
+    let currentQuestionIndex = 0;
+    let timeRemaining = 90;
+
+    function startGame() {
+        score = 0;
+        currentQuestionIndex = 0;
+        timeRemaining = 90;
+        document.getElementById('score').textContent = '0';
+        document.getElementById('time').textContent = `${timeRemaining}s`;
+        document.getElementById('start-btn').style.display = 'none';
+        updateTimer();
+        showNextQuestion();
+    }
+
+    function updateTimer() {
+        const timer = setInterval(() => {
+            timeRemaining--;
+            document.getElementById('time').textContent = `${timeRemaining}s`;
+            if(timeRemaining <= 0 || currentQuestionIndex >= questions.length) {
+                clearInterval(timer);
+                endGame();
+            }
+        }, 1000);
+    }
+
+    function showNextQuestion() {
+        if(currentQuestionIndex >= questions.length) {
+            endGame();
+            return;
+        }
+        const questionObj = questions[currentQuestionIndex];
+        const questionElement = document.getElementById('question');
+        const answersElement = document.getElementById('answers');
+        questionElement.textContent = questionObj.question;
+        answersElement.innerHTML = '';
+
+        questionObj.answers.forEach((answer, index) => {
+            const button = document.createElement('button');
+            button.textContent = answer;
+            button.className = 'btn';
+            button.addEventListener('click', () => selectAnswer(index, button, questionObj));
+            const listItem = document.createElement('li');
+            listItem.appendChild(button);
+            answersElement.appendChild(listItem);
+        });
+    }
+
+    function selectAnswer(answerIndex, button, question) {
+        let result = "Incorrect";
+        let correctAnswerText = question.answers[question.correctAnswer];
+
+        document.querySelectorAll('#answers button').forEach(btn => btn.disabled = true); // Disable all buttons
+        
+        if(answerIndex === question.correctAnswer) {
+            score++;
+            document.getElementById('score').textContent = score.toString();
+            button.classList.add('correct-answer');
+            result = "Correct";
+        } else {
+            button.classList.add('incorrect-answer');
+        }
+
+        // Update the answer history table
+        updateAnswerHistory(question.question, question.answers[answerIndex], correctAnswerText, result);
+
+        setTimeout(() => {
+            currentQuestionIndex++;
+            if(currentQuestionIndex < questions.length) {
+                showNextQuestion();
+            } else {
+                endGame();
+            }
+        }, 1000);
+    }
+
+    function updateAnswerHistory(question, yourAnswer, correctAnswer, result) {
+        const answerHistoryBody = document.getElementById('answer-history-body');
+        const row = answerHistoryBody.insertRow();
+        row.insertCell(0).textContent = question;
+        row.insertCell(1).textContent = yourAnswer;
+        row.insertCell(2).textContent = correctAnswer;
+        row.insertCell(3).textContent = result;
+    }
+
+    function endGame() {
+        document.getElementById('question').textContent = `Game Over! Your score is ${score}.`;
+        document.getElementById('answers').innerHTML = '';
+        document.getElementById('start-btn').style.display = 'block';
+        document.getElementById('time').textContent = "Time's up!";
+    }
+
+    document.getElementById('start-btn').addEventListener('click', startGame);
+});
+</script>
+
+
+
+            <!-- game JS ends-->
+            <!-- Game table begins-->
+            <div id="answer-history">
+    <h3>Answer History</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Question</th>
+                <th>Your Answer</th>
+                <th>Correct Answer</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody id="answer-history-body">
+            <!-- Answers will be inserted here dynamically -->
+        </tbody>
+    </table>
+</div>
+
+
+            <!-- game table ends-->
+            <!-- Game section Ends-->
+
 
 
             <!-- clients
