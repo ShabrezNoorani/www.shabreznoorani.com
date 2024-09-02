@@ -4900,3 +4900,50 @@ Adding flash to Please Use mobile in landscape mode
     border-radius: 5px;
     display: inline-block; /* To properly contain the padding and border-radius */
 }
+
+/* Glow effect for Bilingual Resume
+*/
+
+/* Glowing effect for the menu item */
+.s-header__menu-links .glow-effect {
+    position: relative;
+    text-decoration: none;
+    color: #fff; /* Change the color as needed */
+    transition: color 0.3s ease-in-out;
+}
+
+.s-header__menu-links .glow-effect:hover {
+    color: #FFD700; /* Change the hover color as needed */
+}
+
+.s-header__menu-links .glow-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 215, 0, 0.6); /* Glow color */
+    z-index: -1;
+    filter: blur(8px); /* Adjust the blur for the glow effect */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.s-header__menu-links .glow-effect:hover::before {
+    opacity: 1;
+}
+/* End of Flash effect */
+
+/* Continous glow-Flash */
+
+@keyframes glowing {
+    0% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.6); }
+    50% { box-shadow: 0 0 20px rgba(255, 215, 0, 1); }
+    100% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.6); }
+}
+
+.s-header__menu-links .glow-effect {
+    animation: glowing 2s infinite;
+}
+/* end of contonous flash */
