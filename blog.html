@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js" >
+<html lang="en" class="no-js">
 <head>
 
     <!--- basic page needs
@@ -24,22 +24,38 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-00F01B6ZGJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-00F01B6ZGJ');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-00F01B6ZGJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'G-00F01B6ZGJ');
+    </script>
 
+    <style>
+        /* Custom styles for two articles per row */
+        .grid-list-items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px; /* Adjust as needed */
+        }
+
+        @media (max-width: 768px) {
+            .grid-list-items {
+                grid-template-columns: 1fr; /* One column on smaller screens */
+            }
+        }
+
+        .pgn__num.current {
+            font-weight: bold;
+        }
+    </style>
 </head>
 
-
 <body id="top">
-
 
     <!-- preloader
     ================================================== -->
@@ -50,7 +66,6 @@
             <div></div>
         </div>
     </div>
-
 
     <!-- page wrap
     ================================================== -->
@@ -95,7 +110,6 @@
 
         </header> <!-- end s-header -->
 
-
         <!-- # site main content
         ================================================== -->
         <section id="content" class="s-content">
@@ -116,50 +130,51 @@
                     <div class="row">
                         <div class="column xl-12 grid-block">          
         
-                            <!-- <div class="grid-full">         -->
-                                <div class="grid-full grid-list-items">
+                            <div class="grid-full grid-list-items">
 
-                                    <div class="grid-list-items__item blog-card">
-                                        <div class="blog-card__header">
-                                            <div class="blog-card__cat-links">
-                                                <a href="blog.html">Game Publisher</a>
-                                            </div>
-                                            <h3 class="blog-card__title"><a href="single.html">Gameloft: Navigating the Peaks and Valleys of Mobile Gaming Innovation</a></h3>
+                                <div class="grid-list-items__item blog-card">
+                                    <div class="blog-card__header">
+                                        <div class="blog-card__cat-links">
+                                            <a href="blog.html">Game Publisher</a>
                                         </div>
-                                        <div class="blog-card__text">
-                                            <p align="justify">
-                                           Gameloft's journey from a pioneering mobile game developer to facing significant industry challenges illustrates the volatile nature of the tech and entertainment sectors. While they have experienced setbacks, their efforts to adapt and pivot suggest that Gameloft remains a resilient player in the industry. The future of Gameloft will likely depend on their ability to innovate within the rapidly evolving digital landscape and to reconnect with audiences through both nostalgia and new gaming experiences.
-                                            </p>
+                                        <h3 class="blog-card__title"><a href="single.html">Gameloft: Navigating the Peaks and Valleys of Mobile Gaming Innovation</a></h3>
+                                    </div>
+                                    <div class="blog-card__text">
+                                        <p align="justify">
+                                       Gameloft's journey from a pioneering mobile game developer to facing significant industry challenges illustrates the volatile nature of the tech and entertainment sectors. While they have experienced setbacks, their efforts to adapt and pivot suggest that Gameloft remains a resilient player in the industry. The future of Gameloft will likely depend on their ability to innovate within the rapidly evolving digital landscape and to reconnect with audiences through both nostalgia and new gaming experiences.
+                                        </p>
+                                    </div>
+                                </div> <!-- end blog-card -->
+
+                                <div class="grid-list-items__item blog-card">
+                                    <div class="blog-card__header">
+                                        <div class="blog-card__cat-links">
+                                            <a href="retargeting.html">Strategies for Success: Elevating App Engagement and Conversion </a>
                                         </div>
-                                    </div> <!-- end blog-card -->
-                                    <div class="grid-list-items__item blog-card">
-                                        <div class="blog-card__header">
-                                            <div class="blog-card__cat-links">
-                                                <a href="retargeting.html">Strategies for Success: Elevating App Engagement and Conversion </a>
-                                            </div>
-                                            <h3 class="blog-card__title"><a href="retargeting.html">Re-engaging Users: Mastering the Art of Mobile App Retargeting</a></h3>
+                                        <h3 class="blog-card__title"><a href="retargeting.html">Re-engaging Users: Mastering the Art of Mobile App Retargeting</a></h3>
+                                    </div>
+                                    <div class="blog-card__text">
+                                        <p>
+                                            Unlock the power of mobile app retargeting and revolutionize your user engagement strategies! In today's competitive digital landscape, acquiring new users is no longer enough—keeping them engaged is key. Discover the foundational concepts of mobile app retargeting, learn how to leverage cutting-edge tools, and explore advanced techniques for crafting personalized ads that bring users back to your app. With insights into user psychology, data-driven segmentation, and the latest trends in AI and machine learning, this guide will equip you to create retargeting campaigns that convert. Dive in and elevate your app marketing strategy!
+                                        </p>
+                                    </div>
+                                </div> <!-- end blog-card -->
+
+                                <div class="grid-list-items__item blog-card">
+                                    <div class="blog-card__header">
+                                        <div class="blog-card__cat-links">
+                                            <a href="farcry_ubisoft.html">Ubisoft: The Decline of the Far Cry Series </a>
                                         </div>
-                                        <div class="blog-card__text">
-                                            <p>
-                                                Unlock the power of mobile app retargeting and revolutionize your user engagement strategies! In today's competitive digital landscape, acquiring new users is no longer enough—keeping them engaged is key. Discover the foundational concepts of mobile app retargeting, learn how to leverage cutting-edge tools, and explore advanced techniques for crafting personalized ads that bring users back to your app. With insights into user psychology, data-driven segmentation, and the latest trends in AI and machine learning, this guide will equip you to create retargeting campaigns that convert. Dive in and elevate your app marketing strategy!
-                                            </p>
-                                        </div>
-                                    </div> <!-- end blog-card -->
-                                    <div class="grid-list-items__item blog-card">
-                                        <div class="blog-card__header">
-                                            <div class="blog-card__cat-links">
-                                                <a href="farcry_ubisoft.html">Ubisoft: The Decline of the Far Cry Series </a>
-                                            </div>
-                                            <h3 class="blog-card__title"><a href="farcry_ubisoft.html">Re-engaging Users: Mastering the Art of Mobile App Retargeting</a></h3>
-                                        </div>
-                                        <div class="blog-card__text">
-                                            <p>
-                                                The Far Cry series by Ubisoft, once a flagship title known for its expansive open worlds and engaging narratives, has faced criticism in recent years. The series has struggled to innovate, with repetitive gameplay and a lack of fresh ideas contributing to a decline in its popularity. This article will explore the factors leading to the fall of Far Cry from its former glory. [Coming Soon]
-                                            </p>
-                                        </div>
-                                    </div> <!-- end blog-card -->
-                                </div> <!-- grid-list-items -->
-                            <!-- </div>     -->
+                                        <h3 class="blog-card__title"><a href="farcry_ubisoft.html">Ubisoft: The Decline of the Far Cry Series</a></h3>
+                                    </div>
+                                    <div class="blog-card__text">
+                                        <p>
+                                            The Far Cry series by Ubisoft, once a flagship title known for its expansive open worlds and engaging narratives, has faced criticism in recent years. The series has struggled to innovate, with repetitive gameplay and a lack of fresh ideas contributing to a decline in its popularity. This article will explore the factors leading to the fall of Far Cry from its former glory. [Coming Soon]
+                                        </p>
+                                    </div>
+                                </div> <!-- end blog-card -->
+
+                            </div> <!-- grid-list-items -->
 
                         </div> <!-- end grid-block-->
                     </div> <!-- end row -->
@@ -168,34 +183,16 @@
                     <div class="row navigation pagination">
                         <div class="column xl-12">
                             <nav class="pgn">
-                                <ul>
-                                    <li>
-                                        <a class="pgn__prev" href="#0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12.707 17.293L8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"/></svg>
-                                        </a>
-                                    </li>
-                                    <li><a class="pgn__num" href="#0">1</a></li>
-                                    <li><span class="pgn__num current">2</span></li>
-                                    <li><a class="pgn__num" href="#0">3</a></li>
-                                    <li><a class="pgn__num" href="#0">4</a></li>
-                                    <li><a class="pgn__num" href="#0">5</a></li>
-                                    <li><span class="pgn__num dots">…</span></li>
-                                    <li><a class="pgn__num" href="#0">8</a></li>
-                                    <li>
-                                        <a class="pgn__next" href="#0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11.293 17.293l1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"/></svg>
-                                        </a>
-                                    </li>
-                                </ul>
+                                <!-- Pagination buttons will be dynamically inserted here -->
                             </nav>
-                        </div> <!-- end column -->
+                        </div>
                     </div> <!-- end pagination -->
 
                </section>
 
         </section> <!-- s-content-->
 
-         <!-- # cta
+        <!-- # cta
         ================================================== -->
         <section id="cta" class="s-cta">
 
@@ -204,7 +201,7 @@
 
                     <div class="s-cta__content">
                         <h2 class="text-display-title">
-                       Begin Your Journey with a Personalized Consultation Today.
+                        Begin Your Journey with a Personalized Consultation Today.
                         </h2>
                         <p align="justify" class="lead">
                         Embark on a transformative journey tailored to your unique needs and aspirations. Our dedicated team is committed to unlocking your potential, leveraging a wealth of expertise and insights to guide you towards achieving your goals. Every step we take is informed by a deep understanding of your vision, ensuring a path marked by growth, innovation, and success. Connect with us to discover how we can elevate your endeavors to new heights.
@@ -216,7 +213,6 @@
             </div>
 
         </section> <!-- end s-cta -->
-
 
        <!-- # footer 
         ================================================== -->
@@ -341,7 +337,6 @@
             </div>
             
         </footer> <!-- end s-footer -->
-
 
     </div> <!-- end page-wrap -->
 
