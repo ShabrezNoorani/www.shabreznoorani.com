@@ -327,7 +327,7 @@ gtag('config', 'G-00F01B6ZGJ');
         <img src="images/thumbs/about/about-2400-BR.png" alt="Shabir Shabrez Noorani">
         <div class="language-button-container">
             <button id="language-button" onclick="location.href='about.html'" class="language-button">
-                <img src="images/thumbs/clients/EN.svg" alt="Drapeau anglais"> Anglais
+                <img src="images/thumbs/clients/UK.jpeg" alt="Drapeau anglais"> 
             </button>
         </div>
     </div>
@@ -408,5 +408,16 @@ gtag('config', 'G-00F01B6ZGJ');
         </div>
     </div>
     <button class="go-up-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">▲</button>
+
+    <script>
+        let currentTestimonial = 0;
+        const testimonials = document.querySelector('#testimonial-slide');
+        const totalTestimonials = document.querySelectorAll('.testimonial').length;
+
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+            testimonials.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+        }, 16000);
+    </script>
 </body>
 </html>

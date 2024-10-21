@@ -327,14 +327,13 @@ gtag('config', 'G-00F01B6ZGJ');
         <img src="images/thumbs/about/about-2400-BR.png" alt="Shabir Shabrez Noorani">
         <div class="language-button-container">
             <button id="language-button" onclick="location.href='aboutfr.html'" class="language-button">
-                <img src="images/thumbs/clients/FR.svg" alt="French Flag"> French
+                <img src="images/thumbs/clients/FR.svg" alt="French Flag">
             </button>
         </div>
     </div>
         <div class="menu">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="services.html">Expertise</a>
             <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
         </div>
@@ -409,5 +408,17 @@ gtag('config', 'G-00F01B6ZGJ');
         </div>
     </div>
     <button class="go-up-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">▲</button>
+
+    <script>
+        let currentTestimonial = 0;
+        const testimonials = document.querySelector('#testimonial-slide');
+        const totalTestimonials = document.querySelectorAll('.testimonial').length;
+
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+            testimonials.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+        }, 16000);
+    </script>
 </body>
 </html>
+
