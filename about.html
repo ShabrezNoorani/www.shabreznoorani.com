@@ -14,14 +14,14 @@
         color: #333;
     }
     .flyer-container {
-width: 100%;
-max-width: 1000px;
-margin: 50px auto;
-box-shadow: 0 4px 30px rgba(1, 4, 0, 0.1);
-background: #fff;
-border-radius: 15px;
-overflow: visible; /* Changed from hidden to visible */
-}
+        width: 100%;
+        max-width: 1000px;
+        margin: 50px auto;
+        box-shadow: 0 4px 30px rgba(1, 4, 0, 0.1);
+        background: #fff;
+        border-radius: 15px;
+        overflow: visible;
+    }
     .header {
         background: linear-gradient(135deg, #0e6e75, #2e2e2e);
         color: #fff;
@@ -237,9 +237,6 @@ overflow: visible; /* Changed from hidden to visible */
         background: #0e6e75;
         border-radius: 10px;
     }
-   
-
-    /*Language button hover starts here */
     .language-button {
         background-color: #fff;
         color: #0e6e75;
@@ -254,11 +251,9 @@ overflow: visible; /* Changed from hidden to visible */
         display: flex;
         align-items: center;
     }
-
     .language-button:hover {
         transform: scale(1.1);
     }
-
     @keyframes bounce {
         0%, 100% {
             transform: translateY(0);
@@ -267,17 +262,15 @@ overflow: visible; /* Changed from hidden to visible */
             transform: translateY(-10px);
         }
     }
-
     .language-button img {
         width: 20px;
         height: 20px;
         margin-right: 5px;
     }
-
     .language-button::after {
-        content: 'Click here for English';
+        content: 'Click here for French';
         position: absolute;
-        top: -40px;  /* Adjust the position above the button */
+        top: -40px;
         left: 80%;
         transform: translateX(-50%);
         background-color: #0e6e75;
@@ -288,29 +281,24 @@ overflow: visible; /* Changed from hidden to visible */
         opacity: 0;
         white-space: nowrap;
         transition: opacity 0.3s ease, top 0.3s ease;
-        z-index: 10;  /* Ensure it's above other elements */
+        z-index: 10;
     }
-
     .language-button:hover::after {
         opacity: 1;
-        top: -50px;  /* Slight upward movement for effect */
+        top: -50px;
     }
-    /*Language button hover ends here*/
     .heading-contact {
-        font-size: 0.1em;  /* Reduced font size to make the text smaller */
-        color: #fff;  /* Adjust color to match the header background */
-        margin-top: 1px;  /* Slightly adjusted margin for better spacing */
+        font-size: 0.1em;
+        color: #fff;
+        margin-top: 1px;
     }
-
     .heading-contact a {
-        color: #fff;  /* Ensuring links are visible */
+        color: #fff;
         text-decoration: none;
     }
-
     .heading-contact a:hover {
-        text-decoration: underline;  /* Make links stand out on hover */
+        text-decoration: underline;
     }
-
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-00F01B6ZGJ"></script>
@@ -352,9 +340,55 @@ gtag('config', 'G-00F01B6ZGJ');
         </div>
         <div class="content-section">
             <h2>About Me</h2>
-            <p>Hi, I'm Shabir Shabrez Noorani, a passionate and results-driven Digital Marketing Strategist and Retargeting Specialist with extensive experience in enhancing mobile app campaigns and optimizing digital advertising strategies.</p>
+            <p>Hi, I'm Shabir Shabrez Noorani, a passionate and results-driven Digital Marketing Strategist and Retargeting Specialist with extensive experience in enhancing mobile app campaigns and optimizing digital advertising strategies. I am also the co-founder of <a href="https://www.ralithmilith.org/index" target="_blank" rel="noopener noreferrer">Ralith Milith</a>, an NGO dedicated to social change and community support, where I focus on impactful initiatives that foster positive community development.</p>
+            <div class="row pageintro">
+                <div class="column xl-6 lg-12">
+                    <h2 class="text-display-title">From Digital Innovation to Operational Excellence: A Holistic Approach</h2>
+                </div>
+                <div class="column xl-6 lg-12 u-flexitem-x-right">
+                    <p align="justify" class="lead">
+                        As an adept professional with a rich and diverse skill set, my career journey through the realms of digital marketing, operations management, business analysis, supply chain optimization, and risk assessment has not only honed my abilities but also equipped me with a distinctive blend of skills that meet and exceed the varied demands of today's dynamic business environment. My experience spans across multiple industries, enabling me to bring a holistic approach to solving complex business challenges.
+                    </p>
+                </div>                       
+            </div>
             <h2>My Journey</h2>
-            <p>With a Master's in Business Analysis and Consulting from IÉSEG and a Bachelor's in Business Administration from Kashmir University, my educational foundation has always been focused on business and data analysis. Throughout my career, I have worked on improving operational efficiency, campaign management, and client relationships, helping organizations like Adikteev and ESS QUE Works achieve their goals.</p>
+            <p>With a Master's in Business Analysis and Consulting from IÉSEG and a Bachelor's in Business Administration from Kashmir University, my educational foundation has always been focused on business and data analysis. Throughout my career, I have worked on improving operational efficiency, campaign management, and client relationships, helping organizations like Adikteev and ESS QUE Works achieve their goals. Additionally, my work with Ralith Milith has allowed me to contribute directly to community empowerment through sustainable and impactful projects, demonstrating my commitment to both professional excellence and social responsibility.</p>
+            <div class="grid-full grid-list-items list-items show-ctr">
+                <div class="grid-list-items__item list-items__item">
+                    <div class="list-items__item-header">
+                        <h3 class="list-items__item-title">Digital Marketing</h3>
+                    </div>
+                    <div class="list-items__item-text">
+                        <p align="justify">
+                            In digital marketing, I've mastered the art of crafting and executing campaigns that not only capture attention but also drive meaningful engagement, leading to significant increases in user acquisition and retention. My analytical prowess has allowed me to utilize cutting-edge tools to optimize media strategies, achieving remarkable results in terms of ROI and brand visibility.
+                        </p>
+                        <b>Tools and Competencies Developed:</b>
+                        <ul class="list-services">
+                            <li><b>Advanced Data Management:</b> Microsoft Excel and Google Sheets</li>
+                            <li><b>Data Visualization and Business Intelligence:</b> Tableau, Looker, Imply, Insights</li>
+                            <li><b>Mobile Marketing Platforms (MMP) Mastery:</b> Singular, Adjust, AppsFlyer</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-list-items__item list-items__item">
+                    <div class="list-items__item-header">
+                        <h3 class="list-items__item-title">Advanced Campaign Analysis for Optimal Retargeting Performance</h3>
+                    </div>
+                    <div class="list-items__item-text">
+                        <p align="justify">
+                            In my role as an Account Manager, I was instrumental in driving the success of retargeting campaigns by conducting thorough analyses of campaign data to identify and resolve inefficiencies. A keen eye for detail allowed me to detect discrepancies, such as an imbalance between app open rates and click-through rates, signaling potential issues in the user journey or with direct links. This proactive approach not only ensured that campaigns achieved their desired outcomes but also optimized user engagement and conversion rates. By leveraging my analytical skills, I was able to make data-driven decisions that significantly enhanced campaign performance, illustrating my capability to navigate complex analytics and translate insights into actionable strategies.
+                        </p>
+                        <b>Tools and Competencies Developed:</b>
+                        <ul class="list-services">
+                            <li>Data Analysis Proficiency</li>
+                            <li>Analytical Tools Mastery</li>
+                            <li>Problem-Solving Skills</li>
+                            <li>Strategic Thinking</li>
+                            <li>Communication and Reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <h2>Values & Beliefs</h2>
             <ul>
                 <li><strong>Empathy & Impact:</strong> I believe in the power of empathy and understanding. My work with <a href="https://www.ralithmilith.org" target="_blank" rel="noopener noreferrer">Ralith Milith</a> reflects my commitment to social change and community support.</li>
@@ -362,7 +396,7 @@ gtag('config', 'G-00F01B6ZGJ');
                 <li><strong>Commitment to Excellence:</strong> Excellence is the key driver in everything I do. From managing campaigns to leading cross-functional teams, I always strive for the best outcomes.</li>
             </ul>
             <h2>Why Work With Me?</h2>
-            <p>My unique combination of skills in digital marketing, campaign strategy, and operations makes me a valuable asset to any team. I bring a proven track record of driving meaningful results and a passion for making a positive impact both professionally and socially.</p>
+            <p>My unique combination of skills in digital marketing, campaign strategy, and operations makes me a valuable asset to any team. I bring a proven track record of driving meaningful results and a passion for making a positive impact both professionally and socially. Whether it's enhancing brand visibility, optimizing campaigns, or working towards community empowerment through Ralith Milith, my commitment and holistic approach ensure the success of every initiative.</p>
         </div>
         <div class="footer">
             <div class="contact-info">
@@ -374,5 +408,6 @@ gtag('config', 'G-00F01B6ZGJ');
             </div>
         </div>
     </div>
+    <button class="go-up-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">▲</button>
 </body>
 </html>

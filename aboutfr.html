@@ -3,366 +3,399 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shabir Shabrez Noorani - Spécialiste en Marketing Digital</title>
+    <title>À propos - Shabir Shabrez Noorani</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f9f9f9;
-            color: #333;
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+        color: #333;
+    }
+    .flyer-container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 50px auto;
+        box-shadow: 0 4px 30px rgba(1, 4, 0, 0.1);
+        background: #fff;
+        border-radius: 15px;
+        overflow: visible;
+    }
+    .header {
+        background: linear-gradient(135deg, #0e6e75, #2e2e2e);
+        color: #fff;
+        padding: 40px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    .header .info {
+        flex: 1;
+    }
+    .header img {
+        width: 180px;
+    }
+    .header h1 {
+        font-size: 2.8em;
+        margin: 0;
+        font-weight: 700;
+    }
+    .header p {
+        font-size: 1.5em;
+        margin-top: 10px;
+        font-weight: 300;
+    }
+    .language-button-container {
+        position: absolute;
+        top: -30px;
+        right: 20px;
+    }
+    .menu {
+        text-align: center;
+        padding: 20px;
+        background: #0e6e75;
+    }
+    .menu a {
+        margin: 0 20px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.2em;
+    }
+    .content-section {
+        padding: 40px;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+    .content-section h2 {
+        font-size: 2.2em;
+        color: #0e6e75;
+        margin-bottom: 20px;
+    }
+    .timeline {
+        position: relative;
+        margin: 20px 0;
+        padding: 0;
+        list-style: none;
+    }
+    .timeline:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: #0e6e75;
+        left: 25px;
+        margin-left: -1.5px;
+    }
+    .timeline-item {
+        margin: 20px 0;
+        position: relative;
+    }
+    .timeline-item:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #0e6e75;
+    }
+    .timeline-content {
+        margin-left: 60px;
+        background: #fff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .two-column {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .two-column .column {
+        flex: 1;
+        min-width: 280px;
+        background: #f9f9f9;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+    .footer {
+        background: #0e6e75;
+        color: #fff;
+        padding: 30px;
+        text-align: center;
+        font-size: 1em;
+    }
+    .contact-info {
+        margin-top: 15px;
+    }
+    .contact-info p {
+        margin: 5px 0;
+        font-size: 1.1em;
+    }
+    .go-up-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #0e6e75;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        font-size: 1.3em;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .client-logos {
+        background: #fff;
+        padding: 20px;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+    }
+    .client-logos-inner {
+        display: flex;
+        animation: clientLogoScroll 10s linear infinite;
+    }
+    .client-logos img {
+        width: 80px;
+        height: auto;
+        margin: 10px;
+        vertical-align: middle;
+    }
+    @keyframes clientLogoScroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .testimonials {
+        background: #333;
+        color: #fff;
+        padding: 30px;
+        overflow: hidden;
+        position: relative;
+    }
+    .testimonials h2 {
+        font-size: 2em;
+        color: #0e6e75;
+        margin-bottom: 15px;
+    }
+    .testimonial-slide {
+        display: flex;
+        transition: transform 0.40s ease-in-out;
+    }
+    .testimonial {
+        min-width: 100%;
+        padding: 15px;
+        border-left: 5px solid #0e6e75;
+        background: #444;
+        margin-right: 15px;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+    .testimonial p {
+        font-size: 1em;
+        margin: 0;
+    }
+    .testimonial .author {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #fff;
+    }
+    .author img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    .languages {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .languages li {
+        margin-bottom: 15px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+    .progress {
+        background: #e0e0e0;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 10px;
+        width: 60%;
+        margin-left: 15px;
+    }
+    .progress-bar {
+        height: 10px;
+        background: #0e6e75;
+        border-radius: 10px;
+    }
+    .language-button {
+        background-color: #fff;
+        color: #0e6e75;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        position: relative;
+        animation: bounce 2s infinite ease-in-out;
+        transition: transform 0.3s ease;
+        display: flex;
+        align-items: center;
+    }
+    .language-button:hover {
+        transform: scale(1.1);
+    }
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
         }
-        .flyer-container {
-    width: 100%;
-    max-width: 1000px;
-    margin: 50px auto;
-    box-shadow: 0 4px 30px rgba(1, 4, 0, 0.1);
-    background: #fff;
-    border-radius: 15px;
-    overflow: visible; /* Changed from hidden to visible */
-}
-        .header {
-            background: linear-gradient(135deg, #0e6e75, #2e2e2e);
-            color: #fff;
-            padding: 40px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
+        50% {
+            transform: translateY(-10px);
         }
-        .header .info {
-            flex: 1;
-        }
-        .header img {
-            width: 180px;
-        }
-        .header h1 {
-            font-size: 2.8em;
-            margin: 0;
-            font-weight: 700;
-        }
-        .header p {
-            font-size: 1.5em;
-            margin-top: 10px;
-            font-weight: 300;
-        }
-        .language-button-container {
-            position: absolute;
-            top: -30px;
-            right: 20px;
-        }
-        .menu {
-            text-align: center;
-            padding: 20px;
-            background: #0e6e75;
-        }
-        .menu a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: 500;
-            font-size: 1.2em;
-        }
-        .content-section {
-            padding: 40px;
-            text-align: left;
-            margin-bottom: 30px;
-        }
-        .content-section h2 {
-            font-size: 2.2em;
-            color: #0e6e75;
-            margin-bottom: 20px;
-        }
-        .timeline {
-            position: relative;
-            margin: 20px 0;
-            padding: 0;
-            list-style: none;
-        }
-        .timeline:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: #0e6e75;
-            left: 25px;
-            margin-left: -1.5px;
-        }
-        .timeline-item {
-            margin: 20px 0;
-            position: relative;
-        }
-        .timeline-item:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #0e6e75;
-        }
-        .timeline-content {
-            margin-left: 60px;
-            background: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        .two-column {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .two-column .column {
-            flex: 1;
-            min-width: 280px;
-            background: #f9f9f9;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        .footer {
-            background: #0e6e75;
-            color: #fff;
-            padding: 30px;
-            text-align: center;
-            font-size: 1em;
-        }
-        .contact-info {
-            margin-top: 15px;
-        }
-        .contact-info p {
-            margin: 5px 0;
-            font-size: 1.1em;
-        }
-        .go-up-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #0e6e75;
-            color: #fff;
-            border: none;
-            padding: 12px 20px;
-            font-size: 1.3em;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .client-logos {
-            background: #fff;
-            padding: 20px;
-            text-align: center;
-            overflow: hidden;
-            position: relative;
-        }
-        .client-logos-inner {
-            display: flex;
-            animation: clientLogoScroll 10s linear infinite;
-        }
-        .client-logos img {
-            width: 80px;
-            height: auto;
-            margin: 10px;
-            vertical-align: middle;
-        }
-        @keyframes clientLogoScroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .testimonials {
-            background: #333;
-            color: #fff;
-            padding: 30px;
-            overflow: hidden;
-            position: relative;
-        }
-        .testimonials h2 {
-            font-size: 2em;
-            color: #0e6e75;
-            margin-bottom: 15px;
-        }
-        .testimonial-slide {
-            display: flex;
-            transition: transform 0.40s ease-in-out;
-        }
-        .testimonial {
-            min-width: 100%;
-            padding: 15px;
-            border-left: 5px solid #0e6e75;
-            background: #444;
-            margin-right: 15px;
-            border-radius: 10px;
-            box-sizing: border-box;
-        }
-        .testimonial p {
-            font-size: 1em;
-            margin: 0;
-        }
-        .testimonial .author {
-            margin-top: 10px;
-            font-weight: bold;
-            color: #fff;
-        }
-        .author img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-        .languages {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .languages li {
-            margin-bottom: 15px;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-        }
-        .progress {
-            background: #e0e0e0;
-            border-radius: 10px;
-            overflow: hidden;
-            height: 10px;
-            width: 60%;
-            margin-left: 15px;
-        }
-        .progress-bar {
-            height: 10px;
-            background: #0e6e75;
-            border-radius: 10px;
-        }
-       
-
-        /*Language button hover starts here */
-        .language-button {
-            background-color: #fff;
-            color: #0e6e75;
-            font-weight: bold;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            position: relative;
-            animation: bounce 2s infinite ease-in-out;
-            transition: transform 0.3s ease;
-            display: flex;
-            align-items: center;
-        }
-
-        .language-button:hover {
-            transform: scale(1.1);
-        }
-
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .language-button img {
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
-        }
-
-        .language-button::after {
-            content: 'Click here for English';
-            position: absolute;
-            top: -40px;  /* Adjust the position above the button */
-            left: 80%;
-            transform: translateX(-50%);
-            background-color: #0e6e75;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 10px;
-            font-size: 0.9em;
-            opacity: 0;
-            white-space: nowrap;
-            transition: opacity 0.3s ease, top 0.3s ease;
-            z-index: 10;  /* Ensure it's above other elements */
-        }
-
-        .language-button:hover::after {
-            opacity: 1;
-            top: -50px;  /* Slight upward movement for effect */
-        }
-        /*Language button hover ends here*/
-        .heading-contact {
-            font-size: 0.1em;  /* Reduced font size to make the text smaller */
-            color: #fff;  /* Adjust color to match the header background */
-            margin-top: 1px;  /* Slightly adjusted margin for better spacing */
-        }
-
-        .heading-contact a {
-            color: #fff;  /* Ensuring links are visible */
-            text-decoration: none;
-        }
-
-        .heading-contact a:hover {
-            text-decoration: underline;  /* Make links stand out on hover */
-        }
-
-    </style>
-    <!-- Google tag (gtag.js) -->
+    }
+    .language-button img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+    .language-button::after {
+        content: 'Cliquez ici pour l'anglais';
+        position: absolute;
+        top: -40px;
+        left: 80%;
+        transform: translateX(-50%);
+        background-color: #0e6e75;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 10px;
+        font-size: 0.9em;
+        opacity: 0;
+        white-space: nowrap;
+        transition: opacity 0.3s ease, top 0.3s ease;
+        z-index: 10;
+    }
+    .language-button:hover::after {
+        opacity: 1;
+        top: -50px;
+    }
+    .heading-contact {
+        font-size: 0.1em;
+        color: #fff;
+        margin-top: 1px;
+    }
+    .heading-contact a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .heading-contact a:hover {
+        text-decoration: underline;
+    }
+</style>
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-00F01B6ZGJ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-  gtag('config', 'G-00F01B6ZGJ');
+gtag('config', 'G-00F01B6ZGJ');
 </script>
 <!--END Google tag (gtag.js) END-->
 </head>
 <body>
-    <div class="flyer-container">
-        <div class="header">
-            <div class="info">
-                <h1>Shabir Shabrez Noorani</h1>
-                <p>Spécialiste en Stratégie de Marketing Digital & Re-ciblage</p>
-                <p class="heading-contact">
-                    Email : <a href="mailto:shabirshabrez1998@gmail.com">shabirshabrez1998@gmail.com</a> | 
-                    Téléphone : <a href="tel:+33755091524">+33 07 55 09 15 24</a> | 
-                    Adresse : Le Bourget, France | 
-                    LinkedIn : <a href="https://www.linkedin.com/in/ss-noorani/" target="_blank">ss-noorani</a>
-                </p>                
-            </div>
-            <img src="images/thumbs/about/about-2400-BR.png" alt="Shabir Shabrez Noorani">
-            <div class="language-button-container">
-                <button id="language-button" onclick="location.href='about.html'" class="language-button">
-                    <img src="images/thumbs/clients/UK.jpeg" alt="UK Flag"> English
-                </button>
-            </div>
+<div class="flyer-container">
+    <div class="header">
+        <div class="info">
+            <h1>Shabir Shabrez Noorani</h1>
+            <p>Stratège en marketing digital & spécialiste du reciblage</p>
+            <p class="heading-contact">
+                Email : <a href="mailto:shabirshabrez1998@gmail.com">shabirshabrez1998@gmail.com</a> | 
+                Téléphone : <a href="tel:+33755091524">+33 07 55 09 15 24</a> | 
+                Adresse : Le Bourget, France | 
+                LinkedIn : <a href="https://www.linkedin.com/in/ss-noorani/" target="_blank">ss-noorani</a>
+            </p>                
         </div>
+        <img src="images/thumbs/about/about-2400-BR.png" alt="Shabir Shabrez Noorani">
+        <div class="language-button-container">
+            <button id="language-button" onclick="location.href='about.html'" class="language-button">
+                <img src="images/thumbs/clients/EN.svg" alt="Drapeau anglais"> Anglais
+            </button>
+        </div>
+    </div>
         <div class="menu">
             <a href="indexfr.html">Accueil</a>
             <a href="aboutfr.html">À propos</a>
-            <a href="servicesfr.html">Expertise</a>
             <a href="blogfr.html">Blog</a>
             <a href="contactfr.html">Contact</a>
         </div>
         <div class="content-section">
             <h2>À propos de moi</h2>
-            <p>Bonjour, je m'appelle Shabir Shabrez Noorani, un stratégiste marketing digital passionné et spécialiste du reciblage publicitaire, avec une vaste expérience dans l'optimisation des campagnes pour applications mobiles et des stratégies publicitaires digitales.</p>
-            <h2>Mon parcours</h2>
-            <p>Avec un Master en Analyse des Affaires et Conseil de l'IÉSEG et une licence en Administration des Affaires de l'Université du Cachemire, ma formation éducative a toujours été axée sur le business et l'analyse de données. Au cours de ma carrière, j'ai travaillé à l'amélioration de l'efficacité opérationnelle, à la gestion de campagnes et aux relations clients, aidant des organisations comme Adikteev et ESS QUE Works à atteindre leurs objectifs.</p>
-            <h2>Valeurs et convictions</h2>
+            <p>Bonjour, je suis Shabir Shabrez Noorani, un stratège en marketing digital passionné et orienté vers les résultats, spécialisé dans le reciblage avec une vaste expérience dans l'amélioration des campagnes mobiles et l'optimisation des stratégies publicitaires digitales. Je suis également le co-fondateur de <a href="https://www.ralithmilith.org/index" target="_blank" rel="noopener noreferrer">Ralith Milith</a>, une ONG dédiée au changement social et au soutien communautaire, où je me concentre sur des initiatives percutantes qui favorisent le développement communautaire positif.</p>
+            <div class="row pageintro">
+                <div class="column xl-6 lg-12">
+                    <h2 class="text-display-title">De l'innovation digitale à l'excellence opérationnelle : Une approche holistique</h2>
+                </div>
+                <div class="column xl-6 lg-12 u-flexitem-x-right">
+                    <p align="justify" class="lead">
+                        En tant que professionnel chevronné avec un ensemble de compétences riches et diversifiées, mon parcours de carrière à travers les domaines du marketing digital, de la gestion des opérations, de l'analyse commerciale, de l'optimisation de la chaîne d'approvisionnement et de l'évaluation des risques m'a non seulement perfectionné, mais m'a également doté d'un mélange distinctif de compétences répondant aux exigences variées de l'environnement commercial dynamique d'aujourd'hui. Mon expérience s'étend sur plusieurs industries, me permettant d'apporter une approche holistique à la résolution de défis commerciaux complexes.
+                    </p>
+                </div>                       
+            </div>
+            <h2>Mon Parcours</h2>
+            <p>Avec un Master en Analyse Commerciale et Consulting de l'IÉSEG et un Bachelor en Administration des Affaires de l'Université du Cachemire, ma base éducative a toujours été axée sur les affaires et l'analyse de données. Tout au long de ma carrière, j'ai travaillé à améliorer l'efficacité opérationnelle, la gestion de campagnes et les relations clients, aidant des organisations telles qu'Adikteev et ESS QUE Works à atteindre leurs objectifs. De plus, mon travail avec Ralith Milith m'a permis de contribuer directement à l'autonomisation des communautés grâce à des projets durables et percutants, démontrant mon engagement tant envers l'excellence professionnelle que la responsabilité sociale.</p>
+            <div class="grid-full grid-list-items list-items show-ctr">
+                <div class="grid-list-items__item list-items__item">
+                    <div class="list-items__item-header">
+                        <h3 class="list-items__item-title">Marketing Digital</h3>
+                    </div>
+                    <div class="list-items__item-text">
+                        <p align="justify">
+                            Dans le marketing digital, j'ai maîtrisé l'art de concevoir et d'exécuter des campagnes qui non seulement attirent l'attention, mais génèrent également un engagement significatif, entraînant des augmentations considérables de l'acquisition et de la rétention des utilisateurs. Mon expertise analytique m'a permis d'utiliser des outils de pointe pour optimiser les stratégies médiatiques, obtenant des résultats remarquables en termes de ROI et de visibilité de marque.
+                        </p>
+                        <b>Outils et compétences développés :</b>
+                        <ul class="list-services">
+                            <li><b>Gestion avancée des données :</b> Microsoft Excel et Google Sheets</li>
+                            <li><b>Visualisation des données et Intelligence d'affaires :</b> Tableau, Looker, Imply, Insights</li>
+                            <li><b>Maîtrise des plateformes de marketing mobile (MMP) :</b> Singular, Adjust, AppsFlyer</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-list-items__item list-items__item">
+                    <div class="list-items__item-header">
+                        <h3 class="list-items__item-title">Analyse avancée des campagnes pour une performance optimale de reciblage</h3>
+                    </div>
+                    <div class="list-items__item-text">
+                        <p align="justify">
+                            En tant que gestionnaire de comptes, j'ai joué un rôle essentiel dans la réussite des campagnes de reciblage en effectuant des analyses approfondies des données de campagne pour identifier et résoudre les inefficacités. Un œil attentif aux détails m'a permis de détecter des écarts, tels qu'un déséquilibre entre les taux d'ouverture des applications et les taux de clics, signalant des problèmes potentiels dans le parcours utilisateur ou avec les liens directs. Cette approche proactive a non seulement permis aux campagnes d'atteindre leurs objectifs, mais a également optimisé l'engagement et les taux de conversion des utilisateurs. En tirant parti de mes compétences analytiques, j'ai pu prendre des décisions basées sur des données qui ont considérablement amélioré les performances des campagnes, illustrant ma capacité à naviguer dans des analyses complexes et à transformer les insights en stratégies exploitables.
+                        </p>
+                        <b>Outils et compétences développés :</b>
+                        <ul class="list-services">
+                            <li>Maîtrise de l'analyse des données</li>
+                            <li>Maîtrise des outils analytiques</li>
+                            <li>Compétences en résolution de problèmes</li>
+                            <li>Réflexion stratégique</li>
+                            <li>Communication et Reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <h2>Valeurs et Croyances</h2>
             <ul>
-                <li><strong>Empathie et impact :</strong> Je crois au pouvoir de l'empathie et de la compréhension. Mon travail avec <a href="https://www.ralithmilith.org" target="_blank" rel="noopener noreferrer">Ralith Milith</a> reflète mon engagement envers le changement social et le soutien communautaire.</li>
-                <li><strong>Innovation dans l'analyse :</strong> Les données ne sont pas que des chiffres ; c'est l'histoire derrière ces chiffres qui me motive. En utilisant des outils comme Excel, Tableau et Google Analytics, je vise à découvrir des informations qui font la différence.</li>
-                <li><strong>Engagement envers l'excellence :</strong> L'excellence est le moteur principal de tout ce que je fais. De la gestion de campagnes à la direction d'équipes transversales, je m'efforce toujours d'obtenir les meilleurs résultats.</li>
+                <li><strong>Empathie et Impact :</strong> Je crois en la puissance de l'empathie et de la compréhension. Mon travail avec <a href="https://www.ralithmilith.org" target="_blank" rel="noopener noreferrer">Ralith Milith</a> reflète mon engagement envers le changement social et le soutien communautaire.</li>
+                <li><strong>Innovation en analytique :</strong> Les données ne sont pas seulement des chiffres ; c'est l'histoire derrière ces chiffres qui me motive. En utilisant des outils tels qu'Excel, Tableau et Google Analytics, je vise à découvrir des insights qui font la différence.</li>
+                <li><strong>Engagement envers l'excellence :</strong> L'excellence est le moteur de tout ce que je fais. De la gestion de campagnes à la direction d'équipes transversales, je m'efforce toujours d'obtenir les meilleurs résultats.</li>
             </ul>
             <h2>Pourquoi travailler avec moi ?</h2>
-            <p>Ma combinaison unique de compétences en marketing digital, stratégie de campagne et opérations fait de moi un atout précieux pour toute équipe. Je dispose d'un historique prouvé de résultats significatifs et je suis passionné par l'idée d'avoir un impact positif tant sur le plan professionnel que social.</p>
+            <p>Ma combinaison unique de compétences en marketing digital, stratégie de campagne et opérations fait de moi un atout précieux pour toute équipe. J'apporte un historique avéré de résultats significatifs et une passion pour avoir un impact positif, tant sur le plan professionnel que social. Que ce soit pour améliorer la visibilité de la marque, optimiser des campagnes ou travailler pour l'autonomisation des communautés via Ralith Milith, mon engagement et mon approche holistique garantissent le succès de chaque initiative.</p>
         </div>
         <div class="footer">
             <div class="contact-info">
@@ -374,5 +407,6 @@
             </div>
         </div>
     </div>
+    <button class="go-up-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">▲</button>
 </body>
 </html>
