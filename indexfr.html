@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shabir Shabrez Noorani - Spécialiste en Marketing Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        .flyer-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto;
+    box-shadow: 0 4px 30px rgba(1, 4, 0, 0.1);
+    background: #fff;
+    border-radius: 15px;
+    overflow: visible; /* Changed from hidden to visible */
+}
+        .header {
+            background: linear-gradient(135deg, #0e6e75, #2e2e2e);
+            color: #fff;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        .header .info {
+            flex: 1;
+        }
+        .header img {
+            width: 180px;
+        }
+        .header h1 {
+            font-size: 2.8em;
+            margin: 0;
+            font-weight: 700;
+        }
+        .header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+        .language-button-container {
+            position: absolute;
+            top: -30px;
+            right: 20px;
+        }
+        .menu {
+            text-align: center;
+            padding: 20px;
+            background: #0e6e75;
+        }
+        .menu a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.2em;
+        }
+        .content-section {
+            padding: 40px;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        .content-section h2 {
+            font-size: 2.2em;
+            color: #0e6e75;
+            margin-bottom: 20px;
+        }
+        .timeline {
+            position: relative;
+            margin: 20px 0;
+            padding: 0;
+            list-style: none;
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #0e6e75;
+            left: 25px;
+            margin-left: -1.5px;
+        }
+        .timeline-item {
+            margin: 20px 0;
+            position: relative;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #0e6e75;
+        }
+        .timeline-content {
+            margin-left: 60px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .two-column {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .two-column .column {
+            flex: 1;
+            min-width: 280px;
+            background: #f9f9f9;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .footer {
+            background: #0e6e75;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            font-size: 1em;
+        }
+        .contact-info {
+            margin-top: 15px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+        .go-up-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #0e6e75;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.3em;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .client-logos {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .client-logos-inner {
+            display: flex;
+            animation: clientLogoScroll 10s linear infinite;
+        }
+        .client-logos img {
+            width: 80px;
+            height: auto;
+            margin: 10px;
+            vertical-align: middle;
+        }
+        @keyframes clientLogoScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .testimonials {
+            background: #333;
+            color: #fff;
+            padding: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+        .testimonials h2 {
+            font-size: 2em;
+            color: #0e6e75;
+            margin-bottom: 15px;
+        }
+        .testimonial-slide {
+            display: flex;
+            transition: transform 0.40s ease-in-out;
+        }
+        .testimonial {
+            min-width: 100%;
+            padding: 15px;
+            border-left: 5px solid #0e6e75;
+            background: #444;
+            margin-right: 15px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        .testimonial p {
+            font-size: 1em;
+            margin: 0;
+        }
+        .testimonial .author {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .author img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .languages {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .languages li {
+            margin-bottom: 15px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        .progress {
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 10px;
+            width: 60%;
+            margin-left: 15px;
+        }
+        .progress-bar {
+            height: 10px;
+            background: #0e6e75;
+            border-radius: 10px;
+        }
+       
+
+        /*Language button hover starts here */
+        .language-button {
+            background-color: #fff;
+            color: #0e6e75;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            animation: bounce 2s infinite ease-in-out;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .language-button:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .language-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .language-button::after {
+            content: 'Click here for English';
+            position: absolute;
+            top: -40px;  /* Adjust the position above the button */
+            left: 80%;
+            transform: translateX(-50%);
+            background-color: #0e6e75;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 0.9em;
+            opacity: 0;
+            white-space: nowrap;
+            transition: opacity 0.3s ease, top 0.3s ease;
+            z-index: 10;  /* Ensure it's above other elements */
+        }
+
+        .language-button:hover::after {
+            opacity: 1;
+            top: -50px;  /* Slight upward movement for effect */
+        }
+        /*Language button hover ends here*/
+        .heading-contact {
+            font-size: 0.1em;  /* Reduced font size to make the text smaller */
+            color: #fff;  /* Adjust color to match the header background */
+            margin-top: 1px;  /* Slightly adjusted margin for better spacing */
+        }
+
+        .heading-contact a {
+            color: #fff;  /* Ensuring links are visible */
+            text-decoration: none;
+        }
+
+        .heading-contact a:hover {
+            text-decoration: underline;  /* Make links stand out on hover */
+        }
+
+    </style>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-00F01B6ZGJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-00F01B6ZGJ');
+</script>
+<!--END Google tag (gtag.js) END-->
+</head>
+<body>
+    <div class="flyer-container">
+        <div class="header">
+            <div class="info">
+                <h1>Shabir Shabrez Noorani</h1>
+                <p>Spécialiste en Stratégie de Marketing Digital & Re-ciblage</p>
+                <p class="heading-contact">
+                    Email : <a href="mailto:shabirshabrez1998@gmail.com">shabirshabrez1998@gmail.com</a> | 
+                    Téléphone : <a href="tel:+33755091524">+33 07 55 09 15 24</a> | 
+                    Adresse : Le Bourget, France | 
+                    LinkedIn : <a href="https://www.linkedin.com/in/ss-noorani/" target="_blank">ss-noorani</a>
+                </p>                
+            </div>
+            <img src="images/thumbs/about/about-2400-BR.png" alt="Shabir Shabrez Noorani">
+            <div class="language-button-container">
+                <button id="language-button" onclick="location.href='index.html'" class="language-button">
+                    <img src="images/thumbs/clients/UK.jpeg" alt="UK Flag"> English
+                </button>
+            </div>
+        </div>
+        <div class="menu">
+            <a href="indexfr.html">Accueil</a>
+            <a href="aboutfr.html">À propos</a>
+            <a href="servicesfr.html">Expertise</a>
+            <a href="blogfr.html">Blog</a>
+            <a href="contactfr.html">Contact</a>
+        </div>
+        <div class="content-section">
+            <h2>Expérience Professionnelle</h2>
+            <ul class="timeline">
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Account Manager & Consultant - Adikteev</h3>
+                        <p><em>Avril 2023 - Janvier 2024 | Paris, France</em></p>
+                        <p>Gestion de divers secteurs d'applications mobiles, notamment les jeux, le e-commerce et le trading. Spécialisé dans l'optimisation des campagnes, atteignant les KPI des clients liés au ROI, ROAS, CPA et revenus.</p>
+                        <p><strong>Responsabilités & Réalisations Clés :</strong></p>
+                        <ul>
+                            <li>Réalisation de revues d'affaires pour les clients et établissement de relations solides avec les parties prenantes, y compris les cadres supérieurs.</li>
+                            <li>Conseiller stratégique en publicité mobile, utilisant une expertise analytique pour résoudre les défis commerciaux des clients.</li>
+                            <li>Collaboration avec des équipes transversales (Produit, Technique, Ventes et Opérations Publicitaires) pour assurer la mise en œuvre fluide des campagnes.</li>
+                            <li>Ambassadeur d'Adikteev pour le T4 2022, expansion de la portée des médias sociaux.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Gestionnaire des Opérations Publicitaires - Adikteev</h3>
+                        <p><em>Octobre 2022 - Avril 2023 | Paris, France</em></p>
+                        <p>Responsable de la réussite des campagnes des clients en optimisant les objectifs fixés et en fournissant des analyses basées sur les données.</p>
+                        <p><strong>Responsabilités & Réalisations Clés :</strong></p>
+                        <ul>
+                            <li>Présentations de haute qualité, y compris des revues d'affaires et des analyses stratégiques.</li>
+                            <li>Gestion des aspects opérationnels des campagnes, tels que la création, les téléchargements créatifs, les rapports et le suivi des liens.</li>
+                            <li>Collaboration avec les équipes Créative, BI, Ventes et Ingénierie des Solutions pour résoudre les problèmes et mettre en œuvre les meilleures pratiques.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Analyste des Opérations - ESS QUE Works</h3>
+                        <p><em>Mars 2019 - Juillet 2021 | Hawal, Inde</em></p>
+                        <p>Gestion des opérations pour une entreprise de meubles primée au niveau national, amélioration de l'efficacité et de la productivité.</p>
+                        <p><strong>Responsabilités & Réalisations Clés :</strong></p>
+                        <ul>
+                            <li>Conception de plans pour améliorer les opérations et recommandation de modifications systémiques, augmentant la productivité de plus de 20 %.</li>
+                            <li>Direction d'un projet d'expansion de l'entrepôt, réduction des coûts d'inventaire de plus de 30 %.</li>
+                            <li>Direction d'équipes transversales pour maintenir les objectifs opérationnels et des initiatives d'amélioration continue.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Analyste en Développement des Affaires - ESS QUE Works</h3>
+                        <p><em>Octobre 2018 - Février 2019 | Srinagar, Inde</em></p>
+                        <p>Réalisation de diligences raisonnables, augmentation des ventes par appels à froid, et analyse des données après-vente pour développer des stratégies de satisfaction des clients.</p>
+                        <p><strong>Responsabilités & Réalisations Clés :</strong></p>
+                        <ul>
+                            <li>Développement de relations commerciales clés avec les clients et direction d'une campagne majeure d'appels à froid, augmentant l'afflux de clients de 9 %.</li>
+                            <li>Introduction d'un programme de référence, résultant en une augmentation de 14 % de la base de clients.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="two-column">
+            <div class="column">
+                <h2>Éducation</h2>
+                <ul>
+                    <li><strong>IÉSEG School of Management, Paris, France (2021 - 2023)</strong> - Master en Analyse des Affaires et Conseil </li>
+                    <li><strong>Université du Kashmir, Inde (2015 - 2018)</strong> - Licence en Administration des Affaires </li>
+                    <li><strong>Emploi Service et Formation, Paris, France (Avr 2024 - Oct 2024)</strong> - Cours de Langue Française </li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>Langues</h2>
+                <ul class="languages">
+                    <li>Anglais <div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></li>
+                    <li>Kashmiri <div class="progress"><div class="progress-bar" style="width: 95%;"></div></div></li>
+                    <li>Français <div class="progress"><div class="progress-bar" style="width: 20%;"></div></div></li>
+                    <li>Hindi <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></li>
+                    <li>Ourdou <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></li>
+                    <li>Sanskrit <div class="progress"><div class="progress-bar" style="width: 10%;"></div></div></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="two-column">
+            <div class="column">
+                <h2>Compétences Techniques</h2>
+                <ul>
+                    <li>Programmation R</li>
+                    <li>VBA</li>
+                    <li>SQL</li>
+                    <li>Python</li>
+                    <li>SQLite</li>
+                    <li>Power BI/Tableau</li>
+                    <li>Suite Microsoft Office (Avancée)</li>
+                    <li>Gestionnaire de Publicité Google</li>
+                    <li>DSP</li>
+                    <li>MMP - Singular/Adjust/Singular</li>
+                    <li>SEO</li>
+                    <li>Gestion de Campagne</li>
+                    <li>Test de Lien</li>
+                    <li>Analyse de la Concentration des Revenus</li>
+                    <li>Prédiction de Churn</li>
+                    <li>Test d'Incrémentalité</li>
+                    <li>Test A/B</li>
+                    <li>Connaissance en Acquisition d'Utilisateurs</li>
+                    <li>Recherche de Marché</li>
+                    <li>Google Analytics</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>Compétences Douces</h2>
+                <ul>
+                    <li>Leadership</li>
+                    <li>Gestion d'événements</li>
+                    <li>Collaboration Transversale</li>
+                    <li>Relations Client et Planification Stratégique</li>
+                    <li>Compétences en Communication & Présentation</li>
+                    <li>Leadership d'équipe & Gestion</li>
+                    <li>Résolution de Problèmes</li>
+                    <li>Gestion du Temps</li>
+                    <li>Adaptabilité</li>
+                    <li>Motivation Interne & Initiative</li>
+                    <li>Construction de Confiance & Gestion des Relations Client</li>
+                    <li>Esprit Proactif & Stratégique</li>
+                    <li>Collaboration & Motivation d'équipe</li>
+                    <li>Drive pour l'Amélioration Continue</li>
+                    <li>Analyse de Données & Génération d'Insights</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="client-logos">
+            <h2>Collaboration étroite avec des annonceurs d'applications sur des stratégies de re-engagement et de reciblage axé sur les revenus</h2>
+            <div class="client-logos-inner">
+                <img src="images/thumbs/clients/DentsuX.jpg" alt="DentsuX">
+                <img src="images/thumbs/clients/FDJ.png" alt="FDJ">
+                <img src="images/thumbs/clients/Fruitz.jpg" alt="Fruitz">
+                <img src="images/thumbs/clients/LALALAB.jpeg" alt="LALALAB">
+                <img src="images/thumbs/clients/LIFESUM.png" alt="LIFESUM AB">
+                <img src="images/thumbs/clients/MadBrainGames.png" alt="Mad Brain Games">
+                <img src="images/thumbs/clients/MillionVictories.png" alt="Million Victories">
+                <img src="images/thumbs/clients/Next.jpg" alt="Next">
+                <img src="images/thumbs/clients/Pure" alt="Pure Square">
+                <img src="images/thumbs/clients/PublicsGroup.png" alt="Publics Media">
+                <img src="images/thumbs/clients/PlanetArt.jpeg" alt="PlanetArt">
+                <img src="images/thumbs/clients/Swiggy.png" alt="Swiggy">
+                <img src="images/thumbs/clients/TripledotStudio.png" alt="TripleDot Studios">
+                <img src="images/thumbs/clients/Youhodler.jpg" alt="YouHodler">
+                <img src="images/thumbs/clients/Zoomd.png" alt="Zoomd Ltd">
+                <img src="images/thumbs/clients/Zimad.jpg" alt="ZiMAD">
+                <img src="images/thumbs/clients/DentsuX.jpg" alt="DentsuX">
+                <img src="images/thumbs/clients/FDJ.png" alt="FDJ">
+                <img src="images/thumbs/clients/Fruitz.jpg" alt="Fruitz">
+                <img src="images/thumbs/clients/LALALAB.jpeg" alt="LALALAB">
+                <img src="images/thumbs/clients/LIFESUM.png" alt="LIFESUM AB">
+                <img src="images/thumbs/clients/MadBrainGames.png" alt="Mad Brain Games">
+                <img src="images/thumbs/clients/MillionVictories.png" alt="Million Victories">
+                <img src="images/thumbs/clients/Next.jpg" alt="Next">
+                <img src="images/thumbs/clients/Pure" alt="Pure Square">
+                <img src="images/thumbs/clients/PublicsGroup.png" alt="Publics Media">
+                <img src="images/thumbs/clients/PlanetArt.jpeg" alt="PlanetArt">
+                <img src="images/thumbs/clients/Swiggy.png" alt="Swiggy">
+                <img src="images/thumbs/clients/TripledotStudio.png" alt="TripleDot Studios">
+                <img src="images/thumbs/clients/Youhodler.jpg" alt="YouHodler">
+                <img src="images/thumbs/clients/Zoomd.png" alt="Zoomd Ltd">
+                <img src="images/thumbs/clients/Zimad.jpg" alt="ZiMAD">
+            </div>
+        </div>
+
+        <div class="testimonials">
+            <h2>Témoignages</h2>
+            <div class="testimonial-slide" id="testimonial-slide">
+                <div class="testimonial">
+                    <p>" Shabrez a rejoint Adikteev en tant que stagiaire en opérations publicitaires avant de passer au poste de Coordinateur de Comptes. Ce qui le distingue, c'est sa motivation interne et sa curiosité pour le marketing digital et le reciblage programmatique ainsi que sa volonté de s'améliorer. Dès le début de son parcours chez Adikteev, il a travaillé sur l'optimisation des processus et des tâches d'opérations publicitaires pour les rendre plus propres et plus efficaces. Il a également acquis une compréhension approfondie du secteur du reciblage afin de prendre la pleine propriété de la performance des campagnes et des tâches opérationnelles des comptes dédiés. J'étais heureux de travailler avec Shabrez et de réaliser ensemble les objectifs de l'équipe."</p>
+                    <p class="author">
+                        <img src="images/avatars/user-01.jpg" alt="Nadya Krytsyna">
+                        <a href="https://www.linkedin.com/in/nadyaadikteev/" target="_blank">Nadya Krytsyna</a>, Directrice EMEA/APAC - Adikteev
+                    </p>
+                </div>
+                <div class="testimonial">
+                    <p>"Shabir a commencé son parcours avec nous en tant que stagiaire et est rapidement devenu un membre précieux de l'équipe. Son approche proactive envers les clients et son esprit stratégique l'ont conduit à devenir Coordinateur de Comptes. Shabir est très agréable à travailler - il inspire confiance et collabore bien avec nos clients. Il prend en charge des projets, jouant un rôle essentiel dans la détection et la résolution de divers problèmes. En se basant sur l'excellent travail de Shabir, je le recommande vivement et je suis confiant qu'il réussira dans tout ce qu'il entreprend."</p>
+                    <p class="author">
+                        <img src="images/avatars/user-04.jpg" alt="Mikheil Pagava">
+                        <a href="https://www.linkedin.com/in/mikheil-paghava/" target="_blank">Mikheil Pagava</a>, Spécialiste de la Croissance Mobile & Reciblage d'Applications - Adikteev
+                    </p>
+                </div>
+                <div class="testimonial">
+                    <p>"Shabir a rejoint Adikteev en tant que stagiaire puis a été embauché en tant que Coordinateur de Comptes parce qu'il a fait preuve de beaucoup d'initiatives et était un excellent membre d'équipe. Shabir a pu plonger rapidement dans l'analyse des données et la compréhension des KPI. Il a établi une relation de confiance avec les clients; il a pris la propriété des problèmes et les a aidés à identifier de nombreux problèmes, à élaborer des stratégies et à lancer des campagnes afin d'atteindre les objectifs et de générer plus de revenus. Je recommande fortement Shabir qui travaillera dur pour extraire des insights de vos données!"</p>
+                    <p class="author">
+                        <img src="images/avatars/user-02.jpg" alt="Mohammad Hatoum">
+                        <a href="https://www.linkedin.com/in/mohammad-hatoum94/" target="_blank">Mohammad Hatoum</a>, Senior Account Manager - Adikteev
+                    </p>
+                </div>
+                <div class="testimonial">
+                    <p>"Shabir Shabrez est une personne capable de transformer le processus de collaboration en une compétition engageante et gagnant-gagnant. Nous avons travaillé ensemble sur plusieurs projets et événements au cours de la dernière année. Le professionnalisme et le perfectionnisme sain de Shabrez m'ont toujours motivé à mieux faire ma part du travail. Il a toujours augmenté la motivation de toute l'équipe avec son approche énergique et aventureuse de la résolution des problèmes. Je recommande vivement Shabrez comme un professionnel dont le travail en équipe motive les autres membres à obtenir de meilleurs résultats!"</p>
+                    <p class="author">
+                        <img src="images/avatars/user-06.jpg" alt="Tajamul Ashraf">
+                        <a href="https://www.linkedin.com/in/tajamul221/" target="_blank">Tajamul Ashraf</a>, MS Recherche - IIT Delhi
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="contact-info">
+                <p>Email : <a href="mailto:shabirshabrez1998@gmail.com">shabirshabrez1998@gmail.com</a></p>
+                <p>Téléphone : +33 07 55 09 15 24</p>
+                <p>Adresse : Le Bourget, France</p>
+                <p>LinkedIn : <a href="https://www.linkedin.com/in/ss-noorani/" target="_blank">ss-noorani</a></p>
+                <p>&copy; 2024 Shabir Shabrez Noorani</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="go-up-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">▲</button>
+
+    <script>
+        let currentTestimonial = 0;
+        const testimonials = document.querySelector('#testimonial-slide');
+        const totalTestimonials = document.querySelectorAll('.testimonial').length;
+
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+            testimonials.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+        }, 16000);
+    </script>
+</body>
+</html>

@@ -4947,3 +4947,94 @@ Adding flash to Please Use mobile in landscape mode
     animation: glowing 2s infinite;
 }
 /* end of contonous flash */
+
+
+/*Client logos*/
+    /* Updated styling for client logos */
+    .client-logos {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        padding: 20px;
+        gap: 15px;  /* Adjusted spacing */
+    }
+    .client-logos img {
+        width: 80px;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+    }
+
+<div class="client-logos">
+    <img src="client1.png" alt="Mad Brain Games">
+    <img src="client2.png" alt="LIFESUM AB">
+    <img src="client3.png" alt="Fruitz">
+    <img src="client4.png" alt="TripleDot Studios">
+    <img src="client5.png" alt="Zoomd Ltd">
+    <img src="client6.png" alt="Pure Square">
+    <img src="client7.png" alt="PlanetArt">
+    <img src="client8.png" alt="YouHodler">
+    <img src="client9.png" alt="Million Victories">
+    <img src="client10.png" alt="ZiMAD">
+    <img src="client11.png" alt="DentsuX">
+    <img src="client12.png" alt="Swiggy">
+    <img src="client13.png" alt="FDJ">
+    <img src="client14.png" alt="LALALAB">
+</div>
+
+/* Client logos ended */
+
+/* Language Button Animation starts here*/ 
+.language-button {
+    background-color: #fff;
+    color: #0e6e75;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    position: relative;
+    animation: bounce 2s infinite ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+.language-button:hover {
+    transform: scale(1.1);
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.language-button::after {
+    content: 'Click here';
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0e6e75;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    opacity: 0;
+    transition: opacity 0.3s ease, top 0.3s ease;
+    white-space: nowrap;
+}
+
+.language-button:hover::after {
+    opacity: 1;
+    top: -50px;
+}
+
+
+/* Language Button Animation Ends here*/ 

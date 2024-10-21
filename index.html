@@ -1,31 +1,317 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js" >
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shabir Shabrez Noorani - Spécialiste en Marketing Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        .flyer-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto;
+    box-shadow: 0 4px 30px rgba(1, 4, 0, 0.1);
+    background: #fff;
+    border-radius: 15px;
+    overflow: visible; /* Changed from hidden to visible */
+}
+        .header {
+            background: linear-gradient(135deg, #0e6e75, #2e2e2e);
+            color: #fff;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        .header .info {
+            flex: 1;
+        }
+        .header img {
+            width: 180px;
+        }
+        .header h1 {
+            font-size: 2.8em;
+            margin: 0;
+            font-weight: 700;
+        }
+        .header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+        .language-button-container {
+            position: absolute;
+            top: -30px;
+            right: 20px;
+        }
+        .menu {
+            text-align: center;
+            padding: 20px;
+            background: #0e6e75;
+        }
+        .menu a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.2em;
+        }
+        .content-section {
+            padding: 40px;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        .content-section h2 {
+            font-size: 2.2em;
+            color: #0e6e75;
+            margin-bottom: 20px;
+        }
+        .timeline {
+            position: relative;
+            margin: 20px 0;
+            padding: 0;
+            list-style: none;
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #0e6e75;
+            left: 25px;
+            margin-left: -1.5px;
+        }
+        .timeline-item {
+            margin: 20px 0;
+            position: relative;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #0e6e75;
+        }
+        .timeline-content {
+            margin-left: 60px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .two-column {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .two-column .column {
+            flex: 1;
+            min-width: 280px;
+            background: #f9f9f9;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .footer {
+            background: #0e6e75;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            font-size: 1em;
+        }
+        .contact-info {
+            margin-top: 15px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+        .go-up-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #0e6e75;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.3em;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .client-logos {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .client-logos-inner {
+            display: flex;
+            animation: clientLogoScroll 10s linear infinite;
+        }
+        .client-logos img {
+            width: 80px;
+            height: auto;
+            margin: 10px;
+            vertical-align: middle;
+        }
+        @keyframes clientLogoScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .testimonials {
+            background: #333;
+            color: #fff;
+            padding: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+        .testimonials h2 {
+            font-size: 2em;
+            color: #0e6e75;
+            margin-bottom: 15px;
+        }
+        .testimonial-slide {
+            display: flex;
+            transition: transform 0.40s ease-in-out;
+        }
+        .testimonial {
+            min-width: 100%;
+            padding: 15px;
+            border-left: 5px solid #0e6e75;
+            background: #444;
+            margin-right: 15px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        .testimonial p {
+            font-size: 1em;
+            margin: 0;
+        }
+        .testimonial .author {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .author img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .languages {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .languages li {
+            margin-bottom: 15px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        .progress {
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 10px;
+            width: 60%;
+            margin-left: 15px;
+        }
+        .progress-bar {
+            height: 10px;
+            background: #0e6e75;
+            border-radius: 10px;
+        }
+       
 
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shabir Shabrez Noorani</title>
+        /*Language button hover starts here */
+        .language-button {
+            background-color: #fff;
+            color: #0e6e75;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            animation: bounce 2s infinite ease-in-out;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
 
-    <script>
-        document.documentElement.classList.remove('no-js');
-        document.documentElement.classList.add('js');
-    </script>
+        .language-button:hover {
+            transform: scale(1.1);
+        }
 
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/styles.css">
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
 
-    <!-- favicons
-    ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+        .language-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
 
+        .language-button::after {
+            content: 'Click here for English';
+            position: absolute;
+            top: -40px;  /* Adjust the position above the button */
+            left: 80%;
+            transform: translateX(-50%);
+            background-color: #0e6e75;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 0.9em;
+            opacity: 0;
+            white-space: nowrap;
+            transition: opacity 0.3s ease, top 0.3s ease;
+            z-index: 10;  /* Ensure it's above other elements */
+        }
 
+        .language-button:hover::after {
+            opacity: 1;
+            top: -50px;  /* Slight upward movement for effect */
+        }
+        /*Language button hover ends here*/
+        .heading-contact {
+            font-size: 0.1em;  /* Reduced font size to make the text smaller */
+            color: #fff;  /* Adjust color to match the header background */
+            margin-top: 1px;  /* Slightly adjusted margin for better spacing */
+        }
+
+        .heading-contact a {
+            color: #fff;  /* Ensuring links are visible */
+            text-decoration: none;
+        }
+
+        .heading-contact a:hover {
+            text-decoration: underline;  /* Make links stand out on hover */
+        }
+
+    </style>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-00F01B6ZGJ"></script>
 <script>
@@ -35,987 +321,260 @@
 
   gtag('config', 'G-00F01B6ZGJ');
 </script>
-
+<!--END Google tag (gtag.js) END-->
 </head>
-
-
-<body id="top">
-
+<body>
+    <div class="flyer-container">
+        <div class="header">
+            <div class="info">
+                <h1>Shabir Shabrez Noorani</h1>
+                <p>Digital Marketing Strategist & Retargeting Specialist</p>
+                <p class="heading-contact">
+                    Email : <a href="mailto:shabirshabrez1998@gmail.com">shabirshabrez1998@gmail.com</a> | 
+                    Phone : <a href="tel:+33755091524">+33 07 55 09 15 24</a> | 
+                    Address : Le Bourget, France | 
+                    LinkedIn : <a href="https://www.linkedin.com/in/ss-noorani/" target="_blank">ss-noorani</a>
+                </p>                
+            </div>
+            <img src="images/thumbs/about/about-2400-BR.png" alt="Shabir Shabrez Noorani">
+            <div class="language-button-container">
+                <button id="language-button" onclick="location.href='indexfr.html'" class="language-button">
+                    <img src="images/thumbs/clients/FR.svg" alt="French Flag"> French
+                </button>
+            </div>
+        </div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Expertise</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact </a>
+        </div>
+    </div>
     
-    <!-- preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
+
+        <div class="content-section">
+            <h2>Work Experience</h2>
+            <ul class="timeline">
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Account Manager & Consultant - Adikteev</h3>
+                        <p><em>April 2023 - January 2024 | Paris, France</em></p>
+                        <p>Managed diverse mobile app verticals, including gaming, e-commerce, and trading sectors. Specialized in campaign optimization, achieving client KPIs related to ROI, ROAS, CPA, and revenues.</p>
+                        <p><strong>Key Responsibilities & Achievements:</strong></p>
+                        <ul>
+                            <li>Conducted client business reviews and built strong relationships with stakeholders, including senior executives.</li>
+                            <li>Acted as a strategic advisor for mobile advertising, utilizing analytical expertise to solve clients' business challenges.</li>
+                            <li>Collaborated with cross-functional teams (Product, Technical, Sales, and Ad Operations) to ensure seamless campaign implementation.</li>
+                            <li>Ambassador for Adikteev for Q4 2022, expanding social media reach.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Ad Operations Manager - Adikteev</h3>
+                        <p><em>October 2022 - April 2023 | Paris, France</em></p>
+                        <p>Responsible for ensuring the success of clients' campaigns by optimizing for set goals and providing data-driven insights.</p>
+                        <p><strong>Key Responsibilities & Achievements:</strong></p>
+                        <ul>
+                            <li>Generated high-quality presentations, including business reviews and strategic analyses.</li>
+                            <li>Handled operational aspects of campaigns, such as creation, creative uploads, reporting, and link tracking.</li>
+                            <li>Collaborated with Creative, BI, Sales, and Solutions Engineering teams to resolve issues and implement best practices.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Operations Analyst - ESS QUE Works</h3>
+                        <p><em>March 2019 - July 2021 | Hawal, India</em></p>
+                        <p>Managed operations for a national award-winning furniture company, enhancing efficiency and productivity.</p>
+                        <p><strong>Key Responsibilities & Achievements:</strong></p>
+                        <ul>
+                            <li>Designed plans to improve operations and recommended system changes, boosting productivity by over 20%.</li>
+                            <li>Directed an expansion project for the warehouse, reducing inventory costs by over 30%.</li>
+                            <li>Led cross-functional teams to maintain operational goals and continuous improvement initiatives.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Business Development Analyst - ESS QUE Works</h3>
+                        <p><em>October 2018 - February 2019 | Srinagar, India</em></p>
+                        <p>Conducted due diligence, increased sales via cold calls, and analyzed after-sales data to develop client satisfaction strategies.</p>
+                        <p><strong>Key Responsibilities & Achievements:</strong></p>
+                        <ul>
+                            <li>Developed key business relationships with clients and led a major cold-calling campaign, increasing client influx by 9%.</li>
+                            <li>Introduced a referral program, resulting in a 14% increase in the client base.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="two-column">
+            <div class="column">
+                <h2>Education</h2>
+                <ul>
+                    <li><strong>IÉSEG School of Management, Paris, France (2021 - 2023)</strong> - Masters in Business Analysis and Consulting </li>
+                    <li><strong>Kashmir University, India (2015 - 2018)</strong> - Bachelor of Business Administration </li>
+                    <li><strong>Emploi Service et Formation, Paris, France (Apr 2024 - Oct 2024)</strong> - French Language Course </li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>Languages</h2>
+                <ul class="languages">
+                    <li>English <div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></li>
+                    <li>Kashmiri <div class="progress"><div class="progress-bar" style="width: 95%;"></div></div></li>
+                    <li>French <div class="progress"><div class="progress-bar" style="width: 20%;"></div></div></li>
+                    <li>Hindi <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></li>
+                    <li>Urdu <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></li>
+                    <li>Sanskrit <div class="progress"><div class="progress-bar" style="width: 10%;"></div></div></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="two-column">
+            <div class="column">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>R Programming</li>
+                    <li>VBA</li>
+                    <li>SQL</li>
+                    <li>Python</li>
+                    <li>SQLite</li>
+                    <li>Power BI/Tableau</li>
+                    <li>Microsoft Office Suite (Advanced)</li>
+                    <li>Google Ads Manager</li>
+                    <li>DSP</li>
+                    <li>MMP - Singular/Adjust/Singular</li>
+                    <li>SEO</li>
+                    <li>Campaign Management</li>
+                    <li>Link Testing</li>
+                    <li>Revenue Concentration Analysis</li>
+                    <li>Churn Prediction</li>
+                    <li>Incrementality Testing</li>
+                    <li>A/B Testing</li>
+                    <li>User Acquisition Knowledge</li>
+                    <li>Market Research</li>
+                    <li>Google Analytics</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>Soft Skills</h2>
+                <ul>
+                    <li>Leadership</li>
+                    <li>Event Management</li>
+                     <li>Cross-functional Collaboration</li>
+                     <li>Client Relations and Strategic Planning</li>
+                     <li>Communication & Presentation Skills</li>
+                    <li>Team Leadership & Management</li>
+                    <li>Problem-Solving</li>
+                    <li>Time Management</li>
+                    <li>Adaptability</li>
+                    <li>Internal Motivation & Initiative</li>
+                    <li>Trust Building & Client Relationship Management</li>
+                    <li>Proactive & Strategic Mindset</li>
+                    <li>Collaboration & Team Motivation</li>
+                    <li>Drive for Continuous Improvement</li>
+                    <li>Data Analysis & Insight Generation</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="client-logos">
+            <h2>Worked closely with app advertisers on re-engagement and revenue-driven retargeting strategies</h2>
+            <div class="client-logos-inner">
+                <img src="images/thumbs/clients/DentsuX.jpg" alt="DentsuX">
+                <img src="images/thumbs/clients/FDJ.png" alt="FDJ">
+                <img src="images/thumbs/clients/Fruitz.jpg" alt="Fruitz">
+                <img src="images/thumbs/clients/LALALAB.jpeg" alt="LALALAB">
+                <img src="images/thumbs/clients/LIFESUM.png" alt="LIFESUM AB">
+                <img src="images/thumbs/clients/MadBrainGames.png" alt="Mad Brain Games">
+                <img src="images/thumbs/clients/MillionVictories.png" alt="Million Victories">
+                <img src="images/thumbs/clients/Next.jpg" alt="Next">
+                <img src="images/thumbs/clients/Pure" alt="Pure Square">
+                <img src="images/thumbs/clients/PublicsGroup.png" alt="Publics Media">
+                <img src="images/thumbs/clients/PlanetArt.jpeg" alt="PlanetArt">
+                <img src="images/thumbs/clients/Swiggy.png" alt="Swiggy">
+                <img src="images/thumbs/clients/TripledotStudio.png" alt="TripleDot Studios">
+                <img src="images/thumbs/clients/Youhodler.jpg" alt="YouHodler">
+                <img src="images/thumbs/clients/Zoomd.png" alt="Zoomd Ltd">
+                <img src="images/thumbs/clients/Zimad.jpg" alt="ZiMAD">
+                <img src="images/thumbs/clients/DentsuX.jpg" alt="DentsuX">
+                <img src="images/thumbs/clients/FDJ.png" alt="FDJ">
+                <img src="images/thumbs/clients/Fruitz.jpg" alt="Fruitz">
+                <img src="images/thumbs/clients/LALALAB.jpeg" alt="LALALAB">
+                <img src="images/thumbs/clients/LIFESUM.png" alt="LIFESUM AB">
+                <img src="images/thumbs/clients/MadBrainGames.png" alt="Mad Brain Games">
+                <img src="images/thumbs/clients/MillionVictories.png" alt="Million Victories">
+                <img src="images/thumbs/clients/Next.jpg" alt="Next">
+                <img src="images/thumbs/clients/Pure" alt="Pure Square">
+                <img src="images/thumbs/clients/PublicsGroup.png" alt="Publics Media">
+                <img src="images/thumbs/clients/PlanetArt.jpeg" alt="PlanetArt">
+                <img src="images/thumbs/clients/Swiggy.png" alt="Swiggy">
+                <img src="images/thumbs/clients/TripledotStudio.png" alt="TripleDot Studios">
+                <img src="images/thumbs/clients/Youhodler.jpg" alt="YouHodler">
+                <img src="images/thumbs/clients/Zoomd.png" alt="Zoomd Ltd">
+                <img src="images/thumbs/clients/Zimad.jpg" alt="ZiMAD">
+            </div>
+        </div>
+
+        <div class="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonial-slide" id="testimonial-slide">
+                <div class="testimonial">
+                    <p>" Shabrez joined Adikteev as an ad ops intern to proceed further to the Account Coordinator position. What makes him stand out is his internal motivation and curiosity toward digital marketing and programmatic retargeting as well as his inner drive to get better. From the very beginning of his journey with Adikteev, he tried to work on ad ops processes & tasks optimizations to make them more neat and efficient. He also gained a high-level understanding of retargeting business to be able to take full ownership of campaign performance and operational tasks for the dedicated accounts. I was glad to work with Shabrez and together achieve team goals."</p>
+                    <p class="author">
+                        <img src="images/avatars/user-01.jpg" alt="Nadya Krytsyna">
+                        <a href="https://www.linkedin.com/in/nadyaadikteev/" target="_blank">Nadya Krytsyna</a>, Director EMEA/APAC - Adikteev
+                    </p>
+                </div>
+                <div class="testimonial">
+                    <p>"Shabir began his journey with us as an intern and quickly became a valuable member of the team. His proactive approach to clients and strategic mindset led to his transition into the role of Account Coordinator. Shabir is great to work with – he builds trust and collaborates well with our clients. He takes charge of projects, playing a key role in spotting and solving different issues. Based on Shabir's outstanding work, I highly recommend him and I'm confident he'll succeed in anything he takes on."</p>
+                    <p class="author">
+                        <img src="images/avatars/user-04.jpg" alt="Mikheil Pagava">
+                        <a href="https://www.linkedin.com/in/mikheil-paghava/" target="_blank">Mikheil Pagava</a>, Mobile Growth & App Retargeting Specialist - Adikteev
+                    </p>
+                </div>
+                <div class="testimonial">
+                    <p>"Shabir joined Adikteev as an intern and then was hired as an Account Coordinator because he showed a lot of initiatives and was a great team member. Shabir was able to dive into data analysis and KPIs understanding so fast. He had built a trustful relationship with the clients; he took the ownership and helped them identifying many issues, building strategies and launching campaigns in order to reach goals and generate more revenue. I highly recommend Shabir that will thrive hard to bring insights from your data!"</p>
+                    <p class="author">
+                        <img src="images/avatars/user-02.jpg" alt="Mohammad Hatoum">
+                        <a href="https://www.linkedin.com/in/mohammad-hatoum94/" target="_blank">Mohammad Hatoum</a>, Senior Account Manager - Adikteev
+                    </p>
+                </div>
+                <div class="testimonial">
+                    <p>"Shabir Shabrez is a person who is capable of turning the process of coaction into an engaging win-win competition. We worked together on several projects and events in the course of the last one years. Shabrez's professionalism and healthy perfectionism always motivated me to do my own part of the job better. He always raised the motivation of the whole team with his energetic and adventurous approach to solving problems. I highly recommend Shabrez as a professional whose work in the team makes other team members strive for better results!"</p>
+                    <p class="author">
+                        <img src="images/avatars/user-06.jpg" alt="Tajamul Ashraf">
+                        <a href="https://www.linkedin.com/in/tajamul221/" target="_blank">Tajamul Ashraf</a>, MS Research - IIT Delhi
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="contact-info">
+                <p>Email: <a href="mailto:shabirshabrez1998@gmail.com">shabirshabrez1998@gmail.com</a></p>
+                <p>Phone: +33 07 55 09 15 24</p>
+                <p>Address: Le Bourget, France</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/ss-noorani/" target="_blank">ss-noorani</a></p>
+                <p>&copy; 2024 Shabir Shabrez Noorani</p>
+            </div>
         </div>
     </div>
 
-
-    <!-- page wrap
-    ================================================== -->
-    <div id="page" class="s-pagewrap ss-home">
-
-
-        <!-- # site header 
-        ================================================== -->
-        <header class="s-header">
-
-            <div class="row s-header__inner width-sixteen-col">
-
-                <div class="s-header__block">
-                    <div class="s-header__logo">
-                        <a class="logo" href="index.html">
-                            <img src="images/logo.svg" alt="Homepage">
-                        </a>
-                    </div>
-
-                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-                </div> <!-- end s-header__block -->
-
-                <nav class="s-header__nav">
-                    <ul class="s-header__menu-links">
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Expertise</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="bilingual_resume.html" class="glow-effect" target="_blank">Bilingual Resume</a></li>
-                    </ul> <!-- s-header__menu-links -->
-
-                    <div class="s-header__contact">
-                        <div class="button-container">
-                            <a href="resume.pdf" class="btn btn--primary s-header__contact-btn" target="_blank">Download Resume</a>
-                            <a class="btn u-fullwidth" target="_blank" href="resumefr.pdf">Télécharger le CV</a>
-                        </div> 
-                    </div> <!-- s-header__contact -->
-    
-                </nav> <!-- end s-header__nav -->
-
-            </div> <!-- end s-header__inner -->
-
-        </header> <!-- end s-header -->
-
-
-        <!-- # site main content
-        ================================================== -->
-        <section id="content" class="s-content">
-
-            <!-- intro
-            ----------------------------------------------- -->
-            <section id="intro" class="s-intro">
-
-                <div class="row s-intro__content width-sixteen-col">
-
-                    <div class="column lg-12 s-intro__content-inner grid-block">
-                        
-                        <div class="s-intro__content-text">
-                            <div class="s-intro__content-pretitle text-pretitle">Hello, I'm Shabir Shabrez Noorani</div>
-                            <h1 class="s-intro__content-title">
-                            Transforming clicks <br>
-                            to customers <br>
-                            with expert retargeting <br>
-                            strategies.
-                            </h1>
-                        </div> <!-- s-intro__content-text -->
-
-                        <div class="s-intro__content-media"> 
-                            <div class="s-intro__content-media-inner">                               
-                                <img src="images/intro-bg.jpg" srcset="images/intro-bg.jpg 1x, images/intro-bg@2x.jpg 2x" alt="">
-                                <div class="lines">                               
-                                    <span></span>                                  
-                                </div>
-                            </div>
-                        </div> <!-- s-intro__content-media -->                      
-
-                        <div class="s-intro__scroll-down">
-                            <a href="#about" class="smoothscroll">
-                                <div class="scroll-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#97b34a" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">&lt;!--!  Atomicons Free 1.00 by @atisalab License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons --&gt;<polyline points="7 13 12 18 17 13"></polyline><line x1="12" y1="18" x2="12" y2="6"></line></svg>
-                                </div>
-                                <span>Scroll for more</span>
-                            </a>
-                        </div> <!-- s-intro__scroll-down -->
-                        
-                    </div> <!-- s-intro__content-inner -->
-
-                </div> <!-- s-intro__content -->
-
-            </section> <!-- end s-intro -->
-
-            <!-- about
-            ----------------------------------------------- -->
-            <section id="about" class="s-about target-section">
-
-                <div class="row s-about__content width-sixteen-col">
-                    <div class="column grid-block grid-section-split">
-
-                        <img src="images/geometric_shape.svg" alt="" class="s-about__content-imgbg">
-
-                        <div class="section-header grid-section-split__header">
-                            <div class="text-pretitle">About</div>                           
-                            <h2 class="text-display-title">
-                            Turning Data into Strategy: Elevating Your Retargeting Campaigns for Impactful Results.
-                            </h2>                           
-                        </div> <!-- end section-header -->
-
-                        <div class="s-about__content-main grid-section-split__primary">
-                            <p align="justify" class="attention-getter">
-                            An experienced account manager and digital marketing strategist with a focus on retargeting campaigns. My journey at Adikteev honed my skills in creating marketing strategies that not only engage but convert. My success lies in a thorough understanding of each campaign's unique landscape—employing detailed analysis and innovative solutions to enhance reach and engagement.
-                            </p>
-
-                            <p align="justify" class="attention-getter">
-                           In the dynamic world of digital marketing, my expertise lies in tailoring strategies that align with your business objectives, whether it's boosting brand visibility, increasing sales, or customer retention. Let's partner to drive your retargeting campaigns to new heights and achieve your business goals.
-                            </p>
-
-                        </div> <!-- end s-about__content-main -->
-
-                        <div class="s-about__content-btn grid-section-split__bottom">
-                            <a href="about.html" class="btn btn--stroke u-fullwidth">More About Me</a>
-
-                            <ul class="s-about__social social-list">
-                                <li>
-                                    <a href="https://www.linkedin.com/in/ss-noorani/" target="_blank" rel="noopener noreferrer">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
-                                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-                                        </svg>
-                                        <span class="u-screen-reader-text">Linkedin</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.youtube.com/channel/UCgwbdPOCVuRuckBatjEThKA" target="_blank" rel="noopener noreferrer">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.441 16.892c-2.102.144-6.784.144-8.883 0-2.276-.156-2.541-1.27-2.558-4.892.017-3.629.285-4.736 2.558-4.892 2.099-.144 6.782-.144 8.883 0 2.277.156 2.541 1.27 2.559 4.892-.018 3.629-.285 4.736-2.559 4.892zm-6.441-7.234l4.917 2.338-4.917 2.346v-4.684z"></path>
-                                        </svg>
-                                        <span class="u-screen-reader-text">Youtube</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.youtube.com/@HolisticHarvest" target="_blank" rel="noopener noreferrer">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
-                                            <path d="M16.23 7.102c-2.002-.136-6.462-.135-8.461 0-2.165.148-2.419 1.456-2.436 4.898.017 3.436.27 4.75 2.437 4.898 1.999.135 6.459.136 8.461 0 2.165-.148 2.42-1.457 2.437-4.898-.018-3.436-.271-4.75-2.438-4.898zm-6.23 7.12v-4.444l4.778 2.218-4.778 2.226zm2-12.222c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12z"></path>
-                                        </svg>
-                                        <span class="u-screen-reader-text">Youtube 2</span>
-                                    </a>
-                                </li>
-                            </ul> <!-- end s-footer__social -->
-                        </div> <!-- end s-about__content-btn -->
-                    
-                    </div> <!-- content-inner -->
-                </div>
-                
-            </section> <!-- end s-about -->
-
-            <!-- Skills and Interests Section 
-                ---------------------------------------->
-            <section id="skills-interests" class="s-skills-interests target-section">
-                <div class="row">
-                    <div class="column full">
-                        <h2 class="section-title">Skills & Interests</h2>
-                    </div>
-                </div>
-                <div class="row s-skills-interests__content">
-                    <!-- Skills -->
-                    <div class="column half s-skills">
-                        <h2>Skills</h2>
-                        <ul>
-                            <li><h3>Languages</h3> R Programming (Basics), Video 360, VBA (Intermediate), SQL(Beginner), Python (Learning in Progress).</li>
-                            <li align="justify"><h3>Tools</h3> SQLite, Tableau, Power BI, Imply, Insights, Microsoft Office, DSP, MMP Dashboards, Google ads Manager.</li>
-                            <li><h3>Soft Skills</h3> Leaderships, Event Management, Writing, Public Speaking, Time Management, Team Work, Critical Thinking, Active Listening,.</li>
-                        </ul>
-                    </div>
-                   
-                    <!-- interests -->
-                    <div class="column half s-interests">
-                        <h2>Interests</h2>
-                        <ul>
-                            <li align="justify"><h3>Cricket</h3> Awarded best all rounder.Played state level cricket.</li>
-                            <li align="justify"><h3>Reading</h3> My bookshelf is a testament to my varied tastes, from the strategic depth of "The Art of War" to the political allegory in "Animal Farm," and the spine-tingling suspense of horror novels that keep me up at night..</li>
-                            <li align="justify"><h3>PC/Mobile Games</h3> Whether it's the immersive worlds on my PC or the instant fun on my mobile, gaming is my portal to endless adventures, challenges, and a vibrant community of fellow gamers.</li>
-                        </ul>
-                    </div>
-                    <!-- Language section-->
-                    <!-- Languages with Sleek Progress Bars -->
-                    <div class="column half s-interests">
-                        <h2>Languages</h2>
-                        <ul>
-                            <li>
-                                <h3>English</h3>
-                                <div class="progress-bar-container">
-                                    <div class="progress english" style="width: 100%;"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <h3>Urdu</h3>
-                                <div class="progress-bar-container">
-                                    <div class="progress urdu" style="width: 88%;"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <h3>Kashmiri</h3>
-                                <div class="progress-bar-container">
-                                    <div class="progress kashmiri" style="width: 100%;"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <h3>Hindi</h3>
-                                <div class="progress-bar-container">
-                                    <div class="progress kashmiri" style="width: 100%;"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <h3>French</h3>
-                                <div class="progress-bar-container">
-                                    <div class="progress kashmiri" style="width: 20%;"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <h3>Arabic</h3>
-                                <div class="progress-bar-container">
-                                    <div class="progress kashmiri" style="width: 33%;"></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <style>
-                        .progress-bar-container {
-                            width: 100%;
-                            background-color: #e0e0e0;
-                            border-radius: 2px; /* Makes the progress bar container sleeker */
-                            margin: 5px 0;
-                        }
-                        .progress {
-                            height: 4px; /* Reduces the height for a sleek line */
-                            border-radius: 2px;
-                            background-color: #4caf50;
-                            text-align: right;
-                            line-height: 20px;
-                            color: black;
-                            padding-right: 5px;
-                        }
-                    </style>
-                </div>
-            </section> <!-- Skills and interest section ends ----
-            --------------->
-
-            <!-- expertise
-            ----------------------------------------------- -->
-            <section id="expertise" class="s-expertise">
-
-                <div class="row s-expertise__content width-sixteen-col">
-                    <div class="column xl-12 grid-block grid-section-split">
-
-                        <div class="section-header grid-section-split__header">
-                            <div class="text-pretitle">Expertise</div>                           
-                            <h2 class="text-display-title">
-                            My key areas of expertise.
-                            </h2>     
-                            
-                            <p align="justify" class="lead">
-                            As an adept professional with a multifaceted skill set, my journey through digital marketing, operations management, business analysis, supply chain optimization, and risk assessment has equipped me with a unique blend of skills that cater to diverse business needs. Here's an insight into my professional expertise:
-                            </p>
-                        </div> <!-- end section-header -->
-
-                        <div class="s-expertise__content-main grid-section-split__primary">
-
-                            <div class="grid-list-items list-items show-ctr">
-                                <div class="grid-list-items__item list-items__item">
-                                    <div class="grid-list-items__title list-items__item-header">
-                                        <h3 class="list-items__item-title">Digital Marketing & User Engagement</h3>
-                                    </div>
-                                    <div class="grid-list-items__text list-items__item-text">
-                                        <p align="justify"> 
-                                        Demonstrated expertise at Adikteev by leading retargeting campaigns and utilizing analytical tools for optimizing media strategies, achieving significant increases reengagement.
-                                        </p>
-                                    </div>
-                                </div> <!-- list-item -->
-                                <div class="grid-list-items__item list-items__item">
-                                    <div class="grid-list-items__title list-items__item-header">
-                                        <h3 class="list-items__item-title">Operations & Supply Chain Management</h3>
-                                    </div>
-                                    <div class="grid-list-items__text list-items__item-text">
-                                        <p align="justify">
-                                        Enhanced organizational productivity by over 20% and significantly reduced inventory costs at ESS QUE Furniture Works through system redesigns and implementing efficient supply chain strategies.
-                                        </p>
-                                    </div>
-                                </div> <!-- list-expertise__item -->
-                                <div class="grid-list-items__item list-items__item">
-                                    <div class="grid-list-items__title list-items__item-header">
-                                        <h3 class="list-items__item-title">Business Analyst & Development</h3>
-                                    </div>
-                                    <div class="grid-list-items__text list-items__item-text">
-                                        <p align="justify">
-                                       At LetsEndorse, as a Business Analyst Intern, led the ambitious Mission Swavalamban, analyzing market data, interviewing stakeholders, and facilitating the launch of 100 small businesses, honing skills in Excel, project management, and marketing.
-                                        </p>
-                                    </div>
-                                </div> <!-- list-expertise__item -->
-                                <div class="grid-list-items__item list-items__item">
-                                    <div class="grid-list-items__title list-items__item-header">
-                                        <h3 class="list-items__item-title">Strategic Market Analysis & Brand Marketing</h3>
-                                    </div>
-                                    <div class="grid-list-items__text list-items__item-text">
-                                        <p align="justify" >
-                                        Conducted comprehensive market and brand strategy analyses during internships with National Institute of Technology Srinagar and Jammu & Kashmir Bank, implementing superior strategies for competitive positioning and risk mitigation.
-                                        </p>
-                                    </div>
-                                </div> <!-- list-expertise__item -->
-
-                            </div> <!-- grid-list-items -->
-                        </div> <!-- end s-expertise__content-main -->
-
-                        <div class="s-expertise__content-btn grid-section-split__bottom">
-                            <a href="services.html" class="btn btn--stroke u-fullwidth">View All Expertise</a>
-                        </div> <!-- end s-about__content-btn -->
-
-                    </div> <!-- end grid-block-->
-                </div> <!-- end s-expertise__content -->
-
-            </section> <!-- end s-expertise -->
-
-            <!---------------------------------- Game Section begins-------------------------->
-
-
-            <section id="digital-marketing-game" class="s-digital-marketing-game">
-                <div class="row">
-                    <div class="column full text-center">
-                        <h2 class="section-title">Digital Marketing Master Game</h2>
-                        <p>Test your knowledge and become a Digital Marketing Master!</p>
-                        <p class="landscape-notice" style="font-size: 14px;"><b>Please use landscape mode on mobile.</b></p>
-                        <p>All the best</p>
-                        <table style="margin-left: auto; margin-right: auto;">
-                            <tr>
-                                <th style="text-align: center;">Max Score</th>
-                                <th style="text-align: center;">Time</th>
-                            </tr>
-                            <tr>
-                                <td style="text-align: center;">20</td>
-                                <td style="text-align: center;">90 Secs</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </section>
-                <div class="row game-content">
-                    <div class="column full">
-                        <div id="game" class="game-box">
-                            <div id="question" class="game-question">Question will appear here.</div>
-                            <ul id="answers" class="game-answers">
-                                <!-- Answers will be dynamically inserted here -->
-                            </ul>
-                            <div id="game-info" class="game-info">
-                                <p>Score: <span id="score">0</span></p>
-                                <p>Time: <span id="time">00:00</span></p>
-                            </div>
-                            <button id="start-btn" class="btn btn--primary" onclick="startGame()">Start Game</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--Game JS begins-->
-
-
-            <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const questions = [
-        {
-            question: "What is the primary goal of retargeting in digital marketing?",
-            answers: ["Increasing website traffic", "Converting users into customers", "Gathering user data", "Improving search engine ranking"],
-            correctAnswer: 1
-        },
-        {
-            question: "Which of the following is a key metric for mobile app retargeting success?",
-            answers: ["Page views", "Conversion rate", "Bounce rate", "Number of app installs"],
-            correctAnswer: 1
-        },
-        {
-            question: "What does CTR stand for in digital marketing?",
-            answers: ["Click to Return", "Conversion Through Rate", "Click-Through Rate", "Customer Target Rating"],
-            correctAnswer: 2
-        },
-        {
-            question: "Which platform is widely used for creating search engine marketing campaigns?",
-            answers: ["Facebook Ads", "LinkedIn Marketing Solutions", "Google Ads", "Twitter Ads"],
-            correctAnswer: 2
-        },
-        {
-            question: "What is A/B testing in digital marketing?",
-            answers: ["Testing two different marketing strategies back to back", "Comparing the performance of two versions of a webpage or app", "Splitting your audience to test different time slots", "Analyzing two different target markets"],
-            correctAnswer: 1
-        },
-        {
-            question: "Which of the following best describes content marketing?",
-            answers: ["Promoting content exclusively through pay-per-click advertising", "Creating and sharing online material to stimulate interest in products", "Distributing flyers and brochures in digital format", "Emailing customers daily blog posts"],
-            correctAnswer: 1
-        },
-        {
-            question: "SEO is a practice of increasing a site's likelihood of being ranked in the first page of search engine results. What does SEO stand for?",
-            answers: ["Search Engine Optimization", "Search Engine Operations", "Site Enhancement Offering", "Social Media Optimization"],
-            correctAnswer: 0
-        },
-        {
-            question: "Which of these is considered a 'white hat' SEO practice?",
-            answers: ["Buying links", "Keyword stuffing", "Creating high-quality content", "Using hidden text"],
-            correctAnswer: 2
-        },
-        {
-            question: "In email marketing, what does the term 'open rate' refer to?",
-            answers: ["The percentage of emails opened compared to the total sent", "The number of people who unsubscribe after opening an email", "The total number of emails opened by a single user", "The frequency at which marketing emails are sent"],
-            correctAnswer: 0
-        },
-        {
-            question: "What is a 'lookalike audience' in digital advertising?",
-            answers: ["A group of users who have liked similar pages on social media", "A target audience that closely resembles another audience in a database", "Viewers of a competitor's ads", "People who look similar in profile pictures"],
-            correctAnswer: 1
-        },
-        {
-        question: "What is the primary purpose of retargeting ads?",
-        answers: [
-            "To reach new customers who have never visited your website",
-            "To display ads to people who have previously visited your website",
-            "To increase organic search rankings",
-            "To send email campaigns to potential customers"
-        ],
-        correctAnswer: 1
-    },
-    {
-        question: "Which technology is most commonly used for retargeting?",
-        answers: [
-            "Cookies",
-            "QR codes",
-            "Bluetooth beacons",
-            "Email addresses"
-        ],
-        correctAnswer: 0
-    },
-    {
-        question: "What is a 'pixel' in the context of website retargeting?",
-        answers: [
-            "A tiny image used to improve website design",
-            "A unit of digital image resolution",
-            "A code snippet placed on a website to track user behavior",
-            "A type of display ad format"
-        ],
-        correctAnswer: 2
-    },
-    {
-        question: "Why is segmentation important in retargeting campaigns?",
-        answers: [
-            "To decrease the website's load time",
-            "To target ads more precisely to different groups of users",
-            "To increase the cost of the campaign",
-            "To avoid using cookies and pixels"
-        ],
-        correctAnswer: 1
-    },
-    {
-        question: "Which is a benefit of retargeting ads?",
-        answers: [
-            "Decreasing the relevance of ads to users",
-            "Increasing brand awareness among new users",
-            "Bringing previous visitors back to your site to complete a conversion",
-            "Reducing the need for content marketing"
-        ],
-        correctAnswer: 2
-    },
-    {
-        question: "How does 'dynamic retargeting' differ from standard retargeting?",
-        answers: [
-            "It displays the same ad to everyone",
-            "It customizes the ad content based on the user's previous interactions with the site",
-            "It is only used in email marketing",
-            "It doesn't use cookies or pixels"
-        ],
-        correctAnswer: 1
-    },
-    {
-        question: "What role does 'frequency capping' play in retargeting?",
-        answers: [
-            "It ensures ads are shown as frequently as possible",
-            "It limits the number of times ads are shown to the same user",
-            "It increases the cost of ad campaigns",
-            "It caps the duration of the ad campaign"
-        ],
-        correctAnswer: 1
-    },
-    {
-        question: "Which metric would best indicate the success of a retargeting campaign aimed at sales conversion?",
-        answers: [
-            "Click-through rate (CTR)",
-            "Conversion rate",
-            "Number of impressions",
-            "Cost per click (CPC)"
-        ],
-        correctAnswer: 1
-    },
-    {
-        question: "In retargeting, what is 'list burning'?",
-        answers: [
-            "Deleting your entire retargeting list and starting over",
-            "Segmenting your list based on user behavior",
-            "Removing users from your retargeting list after they've converted",
-            "Increasing your advertising budget dramatically"
-        ],
-        correctAnswer: 2
-    },
-    {
-        question: "Why might a digital marketer use 'cross-device retargeting'?",
-        answers: [
-            "To target users only on desktop devices",
-            "To ensure ads are only shown on mobile devices",
-            "To reach users across different devices they use",
-            "To limit ad exposure to a single device per user"
-        ],
-        correctAnswer: 2
-    }
-];
-
-    let score = 0;
-    let currentQuestionIndex = 0;
-    let timeRemaining = 90;
-
-    function startGame() {
-        score = 0;
-        currentQuestionIndex = 0;
-        timeRemaining = 90;
-        document.getElementById('score').textContent = '0';
-        document.getElementById('time').textContent = `${timeRemaining}s`;
-        document.getElementById('start-btn').style.display = 'none';
-        updateTimer();
-        showNextQuestion();
-    }
-
-    function updateTimer() {
-        const timer = setInterval(() => {
-            timeRemaining--;
-            document.getElementById('time').textContent = `${timeRemaining}s`;
-            if(timeRemaining <= 0 || currentQuestionIndex >= questions.length) {
-                clearInterval(timer);
-                endGame();
-            }
-        }, 1000);
-    }
-
-    function showNextQuestion() {
-        if(currentQuestionIndex >= questions.length) {
-            endGame();
-            return;
-        }
-        const questionObj = questions[currentQuestionIndex];
-        const questionElement = document.getElementById('question');
-        const answersElement = document.getElementById('answers');
-        questionElement.textContent = questionObj.question;
-        answersElement.innerHTML = '';
-
-        questionObj.answers.forEach((answer, index) => {
-            const button = document.createElement('button');
-            button.textContent = answer;
-            button.className = 'btn';
-            button.addEventListener('click', () => selectAnswer(index, button, questionObj));
-            const listItem = document.createElement('li');
-            listItem.appendChild(button);
-            answersElement.appendChild(listItem);
-        });
-    }
-
-    function selectAnswer(answerIndex, button, question) {
-        let result = "Incorrect";
-        let correctAnswerText = question.answers[question.correctAnswer];
-
-        document.querySelectorAll('#answers button').forEach(btn => btn.disabled = true); // Disable all buttons
-        
-        if(answerIndex === question.correctAnswer) {
-            score++;
-            document.getElementById('score').textContent = score.toString();
-            button.classList.add('correct-answer');
-            result = "Correct";
-        } else {
-            button.classList.add('incorrect-answer');
-        }
-
-        // Update the answer history table
-        updateAnswerHistory(question.question, question.answers[answerIndex], correctAnswerText, result);
-
-        setTimeout(() => {
-            currentQuestionIndex++;
-            if(currentQuestionIndex < questions.length) {
-                showNextQuestion();
-            } else {
-                endGame();
-            }
-        }, 1000);
-    }
-
-    function updateAnswerHistory(question, yourAnswer, correctAnswer, result) {
-        const answerHistoryBody = document.getElementById('answer-history-body');
-        const row = answerHistoryBody.insertRow();
-        row.insertCell(0).textContent = question;
-        row.insertCell(1).textContent = yourAnswer;
-        row.insertCell(2).textContent = correctAnswer;
-        row.insertCell(3).textContent = result;
-    }
-
-    function endGame() {
-        document.getElementById('question').textContent = `Game Over! Your score is ${score}.`;
-        document.getElementById('answers').innerHTML = '';
-        document.getElementById('start-btn').style.display = 'block';
-        document.getElementById('time').textContent = "Time's up!";
-    }
-
-    document.getElementById('start-btn').addEventListener('click', startGame);
-});
-</script>
-
-
-
-            <!-- game JS ends-->
-            <!-- Game table begins-->
-            <div id="answer-history">
-    <h3>Answer History</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Question</th>
-                <th>Your Answer</th>
-                <th>Correct Answer</th>
-                <th>Result</th>
-            </tr>
-        </thead>
-        <tbody id="answer-history-body">
-            <!-- Answers will be inserted here dynamically -->
-        </tbody>
-    </table>
-</div>
-
-
-            <!-- game table ends-->
-            <!-- Game section Ends-->
-
-
-
-            <!-- clients
-            ----------------------------------------------- -->
-            <section id="clients" class="s-clients">          
-
-                <div class="row s-clients__content-block width-sixteen-col">
-                    <div class="column xl-12 grid-block grid-section-split">
-                    
-                        <div class="section-header grid-section-split__header">
-                            <div class="text-pretitle">Experience</div>                           
-                            <h2 class="text-display-title">
-                            I have had the privilege of working with a diverse range of verticals, each presenting unique challenges and opportunities for growth and engagement. My experience spans across:
-                            </h2>       
-                        </div> <!-- end section-header -->
-                    
-                        <div class="grid-section-split__primary">
-                            <p align="justify" class="lead">
-                            <h3 align="justify">E-Commerce app:</h3> Leveraging data-driven insights to optimize advertising campaigns, we achieved substantial improvements in ROI/ROAS, CPA, CTR, Retention Rate, and Revenue targets.
-                            <h3 style="text-align: Justify;">Health & Fitness Apps:</h3> Similar to the comprehensive approach taken with apps like Lifesum, focusing on user acquisition and engagement through meticulously crafted media strategies.
-                            <h3>Conquest & Strategy Games:</h3> Applying my expertise in mobile advertising to drive engagement and retention within this competitive genre.
-                            <h3>Lottery Apps:</h3> Addressing and solving business challenges through strategic advisory services, enhancing overall campaign effectiveness.
-                            <h3>Fintech Apps:</h3> Collaborating with cross-functional teams to align marketing efforts with overall business objectives, ensuring coherent brand messaging across platforms.
-                            <h3>Word Games:</h3> Engaging with stakeholders at all levels, including C-level executives, to conduct client business reviews and provide actionable insights for continued growth.
-                            </p>   
-
-                           
-                        </div> <!-- end grid-section-split__primary -->
-                    
-                    </div> <!-- end column -->
-                </div> <!-- end row -->
-                <p align="justify">My role involved optimizing ad strategies, managing data analysis and report generation, and ensuring operational aspects of campaign success. This experience has honed my skills in leadership, event management, public speaking, and time management, further enriching my ability to drive meaningful results across a variety of app verticals.
-                </p>
-                </section>
-                            <section class="s-testimonials">
-
-                                    <div class="s-testimonials__header row row-x-center text-center">
-                                        <div class="column xl-8 lg-12">
-
-                                            <p class="text-pretitle">
-                                            Testimonials
-                                            </p>
-                                            <h3>
-                                            Endorsements from Professional Peers
-                                            </h3>                        
-                        
-                                        </div>
-                                    </div> <!--end s-testimonials__header -->
-
-                                    <div class="row s-testimonials__content">
-                                        <div class="column xl-12 testimonials">
-
-                                            <div class="swiper-container testimonials__slider page-slider">
-
-                                                <div class="swiper-wrapper">
-                                                    <div class="testimonials__slide swiper-slide">
-                                                        <p align="justify">
-                                                        Shabrez joined Adikteev as an ad ops intern to proceed further to the Account Coordinator position. What makes him stand out is his internal motivation and curiosity toward digital marketing and programmatic retargeting as well as his inner drive to get better. 
-                                                        From the very beginning of his journey with Adikteev, he tried to work on ad ops processes & tasks optimizations to make them more neat and efficient.
-                                                        He also gained a high-level understanding of retargeting business to be able to take full ownership of campaign performance and operational tasks for the dedicated accounts. I was glad to work with Shabrez and together achieve team goals.
-                                                        </p>
-                                                        <div class="testimonials__author">
-                                                            <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
-                                                            <cite class="testimonials__cite">
-                                                                <strong><a href="https://www.linkedin.com/in/nadyaadikteev/" target="_blank" rel="noopener noreferrer">Nadya Krytsyna</a></strong>
-                                                                <span>Director EMEA/APAC - Adikteev</span>
-                                                            </cite>
-                                                        </div>
-                                                    </div>
-                                                    <div class="testimonials__slide swiper-slide">
-                                                        <p align="justify">
-                                                        Shabir began his journey with us as an intern and quickly became a valuable member of the team. His proactive approach to clients and strategic mindset led to his transition into the role of Account Coordinator.
-                                                        Shabir is great to work with – he builds trust and collaborates well with our clients. He takes charge of projects, playing a key role in spotting and solving different issues. Based on Shabir's outstanding work, I highly recommend him and I'm confident he'll succeed in anything he takes on.
-                                                        </p>
-                                                        <div class="testimonials__author">
-                                                            <img src="images/avatars/user-04.jpg" alt="Author image" class="testimonials__avatar">
-                                                            <cite class="testimonials__cite">
-                                                                <strong><a href="https://www.linkedin.com/in/mikheil-paghava/" target="_blank" rel="noopener noreferrer">Mikheil Pagava</a></strong>
-                                                                <span>Mobile Growth & App Retargeting Specialist - Adikteev</span>
-                                                            </cite>
-                                                        </div>
-                                                    </div>
-                                                    <div class="testimonials__slide swiper-slide">
-                                                        <p align="justify">
-                                                        Shabir joined Adikteev as an intern and then was hired as an Account Coordinator because he showed a lot of initiatives and was a great team member. 
-                                                        Shabir was able to dive into data analysis and KPIs understanding so fast. 
-                                                        He had built a trustful relationship with the clients; he took the ownership and helped them identifying many issues, building strategies and launching campaigns in order to reach goals and generate more revenue.
-                                                        I highly recommend Shabir that will thrive hard to bring insights from your data!
-                                                        </p>
-                                                        <div class="testimonials__author">
-                                                            <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
-                                                            <cite class="testimonials__cite">
-                                                                <strong><a href="https://www.linkedin.com/in/mohammad-hatoum94/" target="_blank" rel="noopener noreferrer">Mohammad Hatoum</a></strong>
-                                                                <span>Senior Account Manager - Adikteev</span>
-                                                            </cite>
-                                                        </div>
-                                                    </div> 
-                                                    <div class="testimonials__slide swiper-slide">
-                                                        <p align="justify">
-                                                        Shabir Shabrez is a person who is capable of turning the process of coaction into an engaging win-win competition. We worked together on several projects and events in the course of the last one years. Shabrez's professionalism and healthy perfectionism always motivated me to do my own part of the job better. He always raised the motivation of the whole team with his energetic and adventurous approach to solving problems. I highly recommend Shabrez as a professional whose work in the team makes other team members strive for better results!
-                                                        </p>
-                                                        <div class="testimonials__author">
-                                                            <img src="images/avatars/user-06.jpg" alt="Author image" class="testimonials__avatar">
-                                                            <cite class="testimonials__cite">
-                                                                <strong><a href="https://www.linkedin.com/in/tajamul221/" target="_blank" rel="noopener noreferrer">Tajamul Ashraf</a></strong>
-                                                                <span>MS Research - IIT Delhi</span>
-                                                            </cite>
-                                                        </div>
-                                                    </div>
-                                                </div> <!-- end swiper-wrapper --> 
-
-                                                <div class="swiper-pagination"></div>
-
-                                            </div> <!--end testimonials__slider --> 
-
-                                        </div> <!-- testimonials -->
-                                    </div> <!--end s-testimonials__content -->
-
-                               </section> <!-- end s-testimonials -->
-
-                        </section> <!-- s-content-->
-
-        <!-- # cta
-        ================================================== -->
-        <section id="cta" class="s-cta">
-
-            <div class="row row-x-center text-center">
-                <div class="column xl-8 lg-12">
-
-                    <div class="s-cta__content">
-                        <h2 class="text-display-title">
-                        Begin Your Journey with a Personalized Consultation Today.
-                        </h2>
-                        <p align="justify" class="lead">
-                        Embark on a transformative journey tailored to your unique needs and aspirations. Our dedicated team is committed to unlocking your potential, leveraging a wealth of expertise and insights to guide you towards achieving your goals. Every step we take is informed by a deep understanding of your vision, ensuring a path marked by growth, innovation, and success. Connect with us to discover how we can elevate your endeavors to new heights.
-                        </p>
-                        <a href="contact.html" class="btn btn--primary">Let's Work Together</a>
-                    </div>
-
-                </div>
-            </div>
-
-        </section> <!-- end s-cta -->
-
-        <!-- # blog
-        ================================================== -->
-        <section id="blog" class="s-blog">
-
-            <div class="row s-blog__content width-sixteen-col">
-                <div class="column xl-12 grid-block">
-
-                    <div class="grid-full section-header text-center">
-                        <div class="text-pretitle">Recent Articles</div>                           
-                        <h2 class="text-display-title">
-                        Latest articles from my blog.
-                        </h2>  
-                    </div> <!-- end section-header --> 
-
-                    <div class="grid-full s-blog__content-main grid-list-items">
-
-                        <div class="grid-list-items__item blog-card">
-                            <div class="blog-card__header">
-                                <div class="blog-card__cat-links">
-                                    <a href="single.html"> Gameloft's enthralling story,</a>
-                                </div>
-                                <h3 class="blog-card__title"><a href="single.html">Gameloft: Navigating the Peaks and Valleys of Mobile Gaming Innovation</a></h3>
-                                        </div>
-                                        <div class="blog-card__text">
-                                            <p align="justify">
-                                           Gameloft's journey from a pioneering mobile game developer to facing significant industry challenges illustrates the volatile nature of the tech and entertainment sectors. While they have experienced setbacks, their efforts to adapt and pivot suggest that Gameloft remains a resilient player in the industry. The future of Gameloft will likely depend on their ability to innovate within the rapidly evolving digital landscape and to reconnect with audiences through both nostalgia and new gaming experiences.
-
-                                </p>
-                            </div>
-                        </div> <!-- end blog-card -->
-                        <div class="grid-list-items__item blog-card">
-                                        <div class="blog-card__header">
-                                            <div class="blog-card__cat-links">
-                                                <a href="retargeting.html">Strategies for Success: Elevating App Engagement and Conversion </a>
-                                            </div>
-                                            <h3 class="blog-card__title"><a href="retargeting.html">Re-engaging Users: Mastering the Art of Mobile App Retargeting</a></h3>
-                                        </div>
-                                        <div class="blog-card__text">
-                                            <p>
-                                                Unlock the power of mobile app retargeting and revolutionize your user engagement strategies! In today's competitive digital landscape, acquiring new users is no longer enough—keeping them engaged is key. Discover the foundational concepts of mobile app retargeting, learn how to leverage cutting-edge tools, and explore advanced techniques for crafting personalized ads that bring users back to your app. With insights into user psychology, data-driven segmentation, and the latest trends in AI and machine learning, this guide will equip you to create retargeting campaigns that convert. Dive in and elevate your app marketing strategy!
-                                            </p>
-                                        </div>
-                                    </div> <!-- end blog-card --> <!-- end blog-card -->
-
-                    </div> <!-- end grid-list-items -->
-
-                </div> <!-- end grid-block-->
-            </div> <!-- end s-blog__content -->
-
-        </section> <!-- end s-blog -->
-
-
-        <!-- # footer 
-        ================================================== -->
-        <footer class="s-footer">
-            <div class="row s-footer__content">
-                <div class="column xl-6 lg-6 md-12 s-footer__block s-footer__about">                    
-                    <h3>About Shabrez</h3>
-                    <p align="justify">
-                    Passionate professional with a unique blend of skills in digital marketing, operations management, and social entrepreneurship. My educational journey at IESEG School of Management and practical experiences, notably at Adikteev and ESS QUE Works, have honed my expertise in campaign optimization and operations efficiency. Beyond my professional pursuits, I co-founded <a href="https://www.ralithmilith.org" target="_blank" rel="noopener noreferrer">Ralith Milith</a>, an anti-drug society aimed at addressing addiction with empathy and support. My career is driven by a desire to merge technical excellence with meaningful social impact, striving to make a difference in both the business world and the community.
-                    </p>               
-                </div>                
-                <div class="column xl-3 lg-6 md-12 s-footer__block s-footer__site-links">
-                    <h3>Site Links</h3>
-                    <ul class="link-list">
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Expertise</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="bilingual_resume.html" class="glow-effect" target="_blank">Bilingual Resume</a></li>
-                    </ul>
-                </div>
-                <!-- send email footer -->
-               <div class="column xl-3 lg-6 md-12 tab-12 s-footer__block s-footer__newsletter">
-                 <h3>Contact Me</h3>
-                 <p>I love to work, send me an email.</p>
-                 <div class="subscribe-form">
-                   <form action="https://formspree.io/f/mbjnzgjo" method="POST" target="_blank">
-                     <label>
-                       Your name:
-                       <input type="text" name="name" placeholder="Your Name">
-                     </label>
-                     <label>
-                       Your email: 
-                       <input type="email" name="email" placeholder="Email">
-                     </label>
-                     <label>
-                       Your message:
-                       <textarea name="message" placeholder="Please share your thoughts or inquiries here. I'll respond promptly."></textarea>
-                     </label>
-                     <!-- your other form fields go here -->
-                     <button type="submit">Send</button>
-                   </form>
-                   <script>
-                       var form = document.getElementById("my-form");
-                       
-                       async function handleSubmit(event) {
-                         event.preventDefault();
-                         var status = document.getElementById("my-form-status");
-                         var data = new FormData(event.target);
-                         fetch(event.target.action, {
-                           method: form.method,
-                           body: data,
-                           headers: {
-                               'Accept': 'application/json'
-                           }
-                         }).then(response => {
-                           if (response.ok) {
-                             status.innerHTML = "Thanks for your submission!";
-                             form.reset()
-                           } else {
-                             response.json().then(data => {
-                               if (Object.hasOwn(data, 'errors')) {
-                                 status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-                               } else {
-                                 status.innerHTML = "Oops! There was a problem submitting your form"
-                               }
-                             })
-                           }
-                         }).catch(error => {
-                           status.innerHTML = "Oops! There was a problem submitting your form"
-                         });
-                       }
-                       form.addEventListener("submit", handleSubmit)
-                   </script>
-                 </div>
-               </div>
-               <!-- End send email footer-->
-            
-            <div class="row s-footer__bottom">
-                <div class="column xl-6 lg-12">
-                    <ul class="s-footer__social social-list">
-                        <li>
-                            <a href="https://www.linkedin.com/in/ss-noorani/" target="_blank" rel="noopener noreferrer">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
-                                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-                                        </svg>
-                                        <span class="u-screen-reader-text">Linkedin</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/channel/UCgwbdPOCVuRuckBatjEThKA" target="_blank" rel="noopener noreferrer">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.441 16.892c-2.102.144-6.784.144-8.883 0-2.276-.156-2.541-1.27-2.558-4.892.017-3.629.285-4.736 2.558-4.892 2.099-.144 6.782-.144 8.883 0 2.277.156 2.541 1.27 2.559 4.892-.018 3.629-.285 4.736-2.559 4.892zm-6.441-7.234l4.917 2.338-4.917 2.346v-4.684z"></path>
-                                        </svg>
-                                        <span class="u-screen-reader-text">Youtube</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/@HolisticHarvest" target="_blank" rel="noopener noreferrer">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
-                                            <path d="M16.23 7.102c-2.002-.136-6.462-.135-8.461 0-2.165.148-2.419 1.456-2.436 4.898.017 3.436.27 4.75 2.437 4.898 1.999.135 6.459.136 8.461 0 2.165-.148 2.42-1.457 2.437-4.898-.018-3.436-.271-4.75-2.438-4.898zm-6.23 7.12v-4.444l4.778 2.218-4.778 2.226zm2-12.222c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12z"></path>
-                                        </svg>
-                                        <span class="u-screen-reader-text">Youtube 2</span>
-                            </a>
-                        </li>
-                       
-                    </ul> <!-- end s-footer__social -->
-                </div>
-                <div class="column xl-6 lg-12">
-                    <p class="ss-copyright">
-                        <span>© Copyright Shabrez 2024</span> 
-                        <span>Design by <a href="https://www.styleshout.com/">StyleShout</a> Distribution By <a href="https://themewagon.com">ThemeWagon</a></span>
-                    </p>
-                </div>
-
-                <div class="ss-go-top">
-                    <a class="smoothscroll" title="Back to Top" href="#top">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">&lt;!--!  Atomicons Free 1.00 by @atisalab License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons --&gt;<polyline points="17 11 12 6 7 11"></polyline><line x1="12" y1="18" x2="12" y2="6"></line></svg>
-                    </a>
-                </div> <!-- end ss-go-top -->
-            </div>
-            
-        </footer> <!-- end s-footer -->
-
-    </div> <!-- end page-wrap -->
-
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-
+    <button class="go-up-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">▲</button>
+
+    <script>
+        let currentTestimonial = 0;
+        const testimonials = document.querySelector('#testimonial-slide');
+        const totalTestimonials = document.querySelectorAll('.testimonial').length;
+
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+            testimonials.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+        }, 16000);
+    </script>
 </body>
 </html>
